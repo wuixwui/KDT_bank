@@ -1,0 +1,66 @@
+/* Initial settings */
+/* Reset */
+
+/* Global */
+
+:root {
+  /* Color */
+  --color-white: #ffffff;
+  --color-off-white: #eeece5;
+  --color-beige: #eeebe5;
+  --color-yellow: #ffdb4c;
+  --color-mustard: #feb700;
+  --color-orange: #ff5f00;
+  --color-light-green: #c4e7b8;
+  --color-emerald: #00bdb2;
+  --color-dark-green: #005f59;
+  --color-light-blue: #73aace;
+  --color-blue: #4c89ff;
+  --color-violet: #c64cff;
+  --color-light-grey: #dcdcdc;
+  --color-grey: #858585;
+  --color-dark: #444444;
+  --color-black: #000000;
+
+  /* Font size */
+  --font-large: 36px;
+  --font-medium: 24px;
+  --font-regular: 18px;
+  --font-small: 14px;
+  --font-micro: 12px;
+
+  /* Font weight */
+  --weight-bold: 700;
+  --weight-medium: 500;
+  --weight-regular: 400;
+  --weight-thin: 300;
+}
+
+/* Typography */
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+h1 {
+  font-size: var(--font-regular);
+  font-weight: var(--weight-medium);
+  color: var(--color-black);
+}
+
+h2 {
+  font-size: var(--font-medium);
+  font-weight: var(--weight-medium);
+  color: var(--color-black);
+}
+
+h3 {
+  font-size: var(--font-regular);
+  font-weight: var(--weight-medium);
+  color: var(--color-dark);
+}
+
+p {
+  font-size: var(--font-regular);
+  font-weight: var(--weight-regular);
+  color: var(--color-dark);
+}
