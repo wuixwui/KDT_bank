@@ -49,6 +49,25 @@ body {
   height: calc(100% - 120px);
   margin: 44px 0 76px;
 }
+/* main */
+.main-page header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 12px 21px 0 27px;
+}
+.main-page header .header-left {
+  box-sizing: border-box;
+  width: 43px;
+  border: 1px solid var(--color-beige);
+  border-radius: 50%;
+}
+.main-page header .header-right {
+  font-size: 0;
+}
+.main-page header .header-right > *:not(:last-child) {
+  margin-right: 18px;
+}
 
 /* nav */
 .app nav ul {
