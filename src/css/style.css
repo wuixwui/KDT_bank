@@ -69,6 +69,17 @@ body {
   margin-right: 18px;
 }
 
+/* commercial */
+.main-page aside {
+  width: fit-content;
+  width: -moz-fit-content;
+  margin: -7px auto 22px;
+}
+.main-page aside p {
+  font-size: var(--font-small);
+  font-weight: var(--weight-medium);
+  color: var(--color-black);
+}
 /* nav */
 .app nav ul {
   position: absolute;
