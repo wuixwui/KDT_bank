@@ -1,8 +1,19 @@
 /* Initial settings */
 /* Reset */
+body {
+  cursor: default;
+}
+a {
+  color: inherit;
+}
+button {
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
 
 /* Global */
-
 :root {
   /* Color */
   --color-white: #ffffff;
@@ -33,7 +44,7 @@
   --weight-bold: 700;
   --weight-medium: 500;
   --weight-regular: 400;
-  --weight-thin: 300;
+  --weight-right: 300;
 }
 
 /* Typography */
