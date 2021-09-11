@@ -45,11 +45,17 @@ body {
 }
 /* app */
 .app {
+  position: relative;
   overflow: hidden;
-  height: calc(100% - 120px);
-  margin: 44px 0 76px;
+  height: calc(100% - 44px);
+  margin-top: 44px;
 }
 /* main */
+main.total {
+  overflow: hidden;
+  height: calc(100% - 76px);
+  margin-bottom: 76px;
+}
 .main-page header {
   display: flex;
   justify-content: space-between;
@@ -68,7 +74,13 @@ body {
 .main-page header .header-right > *:not(:last-child) {
   margin-right: 18px;
 }
-
+/* card */
+.main-page .card {
+  margin: 33px 48px;
+  background: var(--color-white);
+  border-radius: 12px;
+  box-shadow: 0px 0px 16px 0px var(--color-yellow-shadow);
+}
 /* commercial */
 .main-page aside {
   width: fit-content;
