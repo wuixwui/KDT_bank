@@ -14,4 +14,13 @@ spendingManageCloseBtn.addEventListener('click', () => {
     spendingManage.classList.add('close');
   }
 });
-console.log(spendingManage, spendingManageCloseBtn, spendingManageOpenBtn);
+
+// 상세 지출 페이지 버튼
+const spendingDetail = document.querySelector('.main-page .details');
+const spendingDetailToggleBtn = document.querySelector(
+  '.main-page .details > button'
+);
+
+spendingDetailToggleBtn.addEventListener('click', () => {
+  spendingDetail.classList.toggle('up');
+});
