@@ -56,6 +56,7 @@ main.total {
   height: calc(100% - 76px);
   margin-bottom: 76px;
 }
+/* main-page */
 .main-page header {
   display: flex;
   justify-content: space-between;
@@ -76,21 +77,102 @@ main.total {
 }
 /* card */
 .main-page .card {
+  position: relative;
   margin: 33px 48px;
   background: var(--color-white);
   border-radius: 12px;
   box-shadow: 0px 0px 16px 0px var(--color-yellow-shadow);
+}
+.main-page .card .account {
+  padding-top: 14px;
+  text-align: center;
+}
+.main-page .card .account .btn--transfer {
+  position: absolute;
+  top: 14px;
+  right: 17px;
+}
+.main-page .card .amount {
+  margin: 17px 0;
+  text-align: center;
+  vertical-align: text-bottom;
+  font-size: var(--font-small);
+  font-weight: var(--weight-medium);
+}
+.main-page .card .amount .user-amount {
+  margin-right: -3px;
+  letter-spacing: 2px;
+  text-align: right;
+  font-size: var(--font-medium);
+}
+
+.main-page .card .slides {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.main-page .card .slides .slide {
+  position: relative;
+  width: 202px;
+  height: 6px;
+  margin-right: 7px;
+  margin-bottom: 8px;
+}
+.main-page .card .slides .slide .slide-bar[name='spending'] {
+  position: absolute;
+  -webkit-appearance: none;
+  width: 202px;
+  height: 6px;
+  margin-right: 7px;
+  border-radius: 3px;
+  outline: none;
+  overflow: hidden;
+  background: var(--color-bg-grey);
+}
+.main-page
+  .card
+  .slides
+  .slide
+  .slide-bar[name='spending']::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 4px;
+  height: 17px;
+  box-shadow: -407px 0 0 400px var(--color-yellow);
+}
+.main-page .card .slides .slide .slide-bar[name='standard'] {
+  position: absolute;
+  -webkit-appearance: none;
+  width: 202px;
+  height: 6px;
+  margin-right: 7px;
+  border-radius: 3px;
+  outline: none;
+  background: transparent;
+}
+.main-page
+  .card
+  .slides
+  .slide
+  .slide-bar[name='standard']::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  box-sizing: content-box;
+  width: 4px;
+  height: 17px;
+  border: 2px solid var(--color-white);
+  border-radius: 4px;
+  background: var(--color-orange);
+  cursor: pointer;
+}
+
+.main-page .card .remaining {
+  text-align: center;
+  padding-bottom: 7px;
 }
 /* commercial */
 .main-page aside {
   width: fit-content;
   width: -moz-fit-content;
   margin: -7px auto 22px;
-}
-.main-page aside p {
-  font-size: var(--font-small);
-  font-weight: var(--weight-medium);
-  color: var(--color-black);
 }
 /* nav */
 .app nav ul {

@@ -1,4 +1,5 @@
 /* Initial settings */
+
 /* Reset */
 body {
   cursor: default;
@@ -8,6 +9,8 @@ a {
   color: inherit;
 }
 button {
+  margin: 0;
+  padding: 0;
   background: none;
   border: none;
   outline: none;
@@ -33,6 +36,7 @@ button {
   --color-violet: #c64cff;
   --color-light-grey: #dcdcdc;
   --color-grey: #858585;
+  --color-bg-grey: #c4c4c4;
   --color-dark: #444444;
   --color-black: #000000;
 
@@ -52,6 +56,10 @@ button {
 
 /* Typography */
 body {
+  font-family: 'Noto Sans KR', sans-serif;
+}
+button,
+a {
   font-family: 'Noto Sans KR', sans-serif;
 }
 
@@ -77,4 +85,15 @@ p {
   font-size: var(--font-regular);
   font-weight: var(--weight-regular);
   color: var(--color-dark);
+}
+
+.btn-text {
+  font-size: var(--font-small);
+  font-weight: var(--weight-medium);
+  color: var(--color-black);
+}
+.sub-text {
+  color: var(--color-grey);
+  font-size: var(--font-small);
+  font-weight: var(--weight-medium);
 }
