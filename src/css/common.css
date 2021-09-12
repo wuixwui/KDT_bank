@@ -15,6 +15,9 @@ button {
   outline: none;
   cursor: pointer;
 }
+img {
+  display: block;
+}
 
 /* Global */
 :root {

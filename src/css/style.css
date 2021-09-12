@@ -282,8 +282,8 @@ main.total {
 }
 .manage-page .manage-container {
   overflow-y: scroll;
-  height: calc(100% - 79px);
-  padding: 0 30px;
+  height: calc(100% - 110px);
+  padding: 0 30px 31px;
 }
 .manage-page .manage-container .standard .standard-container {
   display: flex;
@@ -326,9 +326,32 @@ main.total {
   height: 198px;
   margin: 17px 0 46px;
 }
-.manage-page .manage-container .month-pattern {
+.manage-page .manage-container .month-pattern .graph {
+  width: 308px;
+  margin: 18px auto 14px;
 }
-
+.manage-page .manage-container .month-pattern .category {
+  display: flex;
+  align-items: center;
+  padding: 9px 0;
+}
+.manage-page .manage-container .month-pattern .category > * {
+  overflow: hidden;
+}
+.manage-page .manage-container .month-pattern .category .category__img {
+  flex-basis: 28px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.manage-page .manage-container .month-pattern .category .category__name {
+  flex-grow: 1;
+  margin-left: 21px;
+}
+.manage-page .manage-container .month-pattern .category .category__amount {
+  text-align: right;
+  color: var(--color-grey);
+}
 .manage-page > button {
   position: absolute;
   top: 44px;
