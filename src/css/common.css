@@ -1,5 +1,4 @@
 /* Initial settings */
-
 /* Reset */
 body {
   cursor: default;
@@ -64,31 +63,26 @@ button,
 a {
   font-family: 'Noto Sans KR', sans-serif;
 }
-
 h1 {
   font-size: var(--font-regular);
   font-weight: var(--weight-medium);
   color: var(--color-black);
 }
-
 h2 {
   font-size: var(--font-medium);
   font-weight: var(--weight-medium);
   color: var(--color-black);
 }
-
 h3 {
   font-size: var(--font-regular);
   font-weight: var(--weight-medium);
   color: var(--color-dark);
 }
-
 p {
   font-size: var(--font-regular);
   font-weight: var(--weight-regular);
   color: var(--color-dark);
 }
-
 .btn-text {
   font-size: var(--font-small);
   font-weight: var(--weight-medium);
@@ -99,8 +93,19 @@ p {
   font-size: var(--font-small);
   font-weight: var(--weight-medium);
 }
-/* common */
-
+.day .sub-text {
+  color: #b4b4b4;
+}
+.day__spendings .amount {
+  font-weight: var(--weight-light);
+}
+.plus {
+  color: var(--color-orange);
+}
+.minus {
+  color: var(--color-dark);
+}
+/* Common */
 /* spending slide bar */
 .slide-bar {
   position: absolute;
@@ -111,6 +116,12 @@ p {
 .slide-bar::-webkit-slider-thumb {
   -webkit-appearance: none;
 }
+
+/* Js */
+:root {
+  --card-container-height: 257px;
+}
+/* Cross browsing */
 /* scroll-none */
 .scroll-none {
   -ms-overflow-style: none; /* IE and Edge */
@@ -119,44 +130,7 @@ p {
 .scroll-none::-webkit-scrollbar {
   display: none; /* Chrome, Safari, Opera*/
 }
-/* piggy-bank */
-.piggy-bank .slide {
-  overflow: hidden;
-  width: 162px;
-  height: 47px;
-  border-radius: 6px;
-  background: var(--color-bg-light-grey);
-  margin-right: 13px;
-}
-.piggy-bank .slide .gauge {
-  box-sizing: border-box;
-  height: 100%;
-  padding: 5px 13px;
-}
-.piggy-bank .slide .gauge > p {
-  font-size: var(--font-micro);
-  color: var(--color-white);
-}
-.btn--piggy-bank {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 162px;
-  height: 47px;
-}
-.btn--piggy-bank svg {
-  margin-right: 6px;
-}
-.btn--piggy-bank p {
-  white-space: nowrap;
-  color: var(--color-orange);
-  font-size: var(--font-micro);
-}
-/* js */
-:root {
-  --card-container-height: 257px;
-}
-/* cross browsing */
+/* firefox slide bar */
 .main-page .card .slides .slide .slide-bar[name='spending']::-moz-range-thumb {
   width: 1px;
   border: none;
