@@ -52,9 +52,15 @@ body {
 }
 /* main */
 main.total {
+  position: relative;
   overflow: hidden;
   height: calc(100% - 76px);
   margin-bottom: 76px;
+}
+.main-page {
+  position: absolute;
+  height: 100%;
+  width: 100%;
 }
 /* main-page */
 .main-page header {
@@ -75,10 +81,22 @@ main.total {
 .main-page header .header-right > *:not(:last-child) {
   margin-right: 18px;
 }
+/* details container */
+.main-page .details-container {
+  position: absolute;
+  top: 55px;
+  left: 0;
+  overflow: hidden;
+  width: 100%;
+  height: calc(100% - 55px);
+}
 /* card */
+.main-page .card-container {
+  padding: 1px 0;
+}
 .main-page .card {
   position: relative;
-  margin: 33px 48px;
+  margin: 32px 48px;
   background: var(--color-white);
   border-radius: 12px;
   box-shadow: 0px 0px 16px 0px var(--color-yellow-shadow);
@@ -105,7 +123,6 @@ main.total {
   text-align: right;
   font-size: var(--font-medium);
 }
-
 .main-page .card .slides {
   display: flex;
   align-items: center;
@@ -118,15 +135,11 @@ main.total {
   margin-right: 7px;
   margin-bottom: 8px;
 }
+/* spending slide bar */
 .main-page .card .slides .slide .slide-bar[name='spending'] {
-  position: absolute;
-  -webkit-appearance: none;
   width: 202px;
   height: 6px;
-  margin-right: 7px;
   border-radius: 3px;
-  outline: none;
-  overflow: hidden;
   background: var(--color-bg-grey);
 }
 .main-page
@@ -134,19 +147,15 @@ main.total {
   .slides
   .slide
   .slide-bar[name='spending']::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  width: 4px;
-  height: 17px;
-  box-shadow: -407px 0 0 400px var(--color-yellow);
+  width: 1px;
+  box-shadow: -202px 0 0 202px var(--color-yellow);
 }
+/* standard slide bar */
 .main-page .card .slides .slide .slide-bar[name='standard'] {
-  position: absolute;
-  -webkit-appearance: none;
+  overflow: visible;
   width: 202px;
   height: 6px;
-  margin-right: 7px;
   border-radius: 3px;
-  outline: none;
   background: transparent;
 }
 .main-page
@@ -154,7 +163,6 @@ main.total {
   .slides
   .slide
   .slide-bar[name='standard']::-webkit-slider-thumb {
-  -webkit-appearance: none;
   box-sizing: content-box;
   width: 4px;
   height: 17px;
@@ -172,7 +180,49 @@ main.total {
 .main-page aside {
   width: fit-content;
   width: -moz-fit-content;
-  margin: -7px auto 22px;
+  margin: -7px auto 21px;
+}
+
+/* detail */
+.main-page .details {
+  box-sizing: border-box;
+  position: absolute;
+  top: var(--card-container-height);
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 23px 36px 0;
+  background: var(--color-bg-white);
+  box-shadow: 0px -5px 14px rgba(189, 144, 28, 0.08);
+  border-radius: 30px 30px 0px 0px;
+}
+.main-page .details > button {
+  position: absolute;
+  top: 4px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 48px;
+  height: 2px;
+  background: var(--color-bg-grey);
+  border-radius: 4px;
+}
+/* piggy bank */
+.main-page .details .piggy-bank {
+  display: flex;
+  overflow-x: scroll;
+  overflow-y: hidden;
+}
+
+.main-page .details .slides {
+  display: flex;
+}
+.main-page .details .slides .slide:nth-child(1) .gauge {
+  width: 65%;
+  background: var(--color-orange);
+}
+.main-page .details .slides .slide:nth-child(2) .gauge {
+  width: 80%;
+  background: var(--color-mustard);
 }
 /* nav */
 .app nav ul {

@@ -21,6 +21,7 @@ button {
 :root {
   /* Color */
   --color-white: #ffffff;
+  --color-bg-white: #f5f5f5;
   --color-off-white: #eeece5;
   --color-light-beige: #eeebe5;
   --color-beige: #dccdb6;
@@ -36,6 +37,7 @@ button {
   --color-violet: #c64cff;
   --color-light-grey: #dcdcdc;
   --color-grey: #858585;
+  --color-bg-light-grey: #dadada;
   --color-bg-grey: #c4c4c4;
   --color-dark: #444444;
   --color-black: #000000;
@@ -96,4 +98,79 @@ p {
   color: var(--color-grey);
   font-size: var(--font-small);
   font-weight: var(--weight-medium);
+}
+/* common */
+.top {
+  top: 0;
+}
+/* spending slide bar */
+.slide-bar {
+  position: absolute;
+  -webkit-appearance: none;
+  outline: none;
+  overflow: hidden;
+}
+.slide-bar::-webkit-slider-thumb {
+  -webkit-appearance: none;
+}
+/* scroll-none */
+.scroll-none {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+.scroll-none::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera*/
+}
+/* piggy-bank */
+.piggy-bank .slide {
+  overflow: hidden;
+  width: 162px;
+  height: 47px;
+  border-radius: 6px;
+  background: var(--color-bg-light-grey);
+  margin-right: 13px;
+}
+.piggy-bank .slide .gauge {
+  box-sizing: border-box;
+  height: 100%;
+  padding: 5px 13px;
+}
+.piggy-bank .slide .gauge > p {
+  font-size: var(--font-micro);
+  color: var(--color-white);
+}
+.btn--piggy-bank {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 162px;
+  height: 47px;
+}
+.btn--piggy-bank svg {
+  margin-right: 6px;
+}
+.btn--piggy-bank p {
+  white-space: nowrap;
+  color: var(--color-orange);
+  font-size: var(--font-micro);
+}
+/* js */
+:root {
+  --card-container-height: 257px;
+}
+/* cross browsing */
+.main-page .card .slides .slide .slide-bar[name='spending']::-moz-range-thumb {
+  width: 1px;
+  border: none;
+  background: var(--color-yellow);
+  box-shadow: -201px 0 0 201px var(--color-yellow);
+}
+.main-page .card .slides .slide .slide-bar[name='standard']::-moz-range-thumb {
+  box-sizing: content-box;
+  width: 4px;
+  height: 17px;
+  border: 2px solid var(--color-white);
+  border-radius: 4px;
+  background: var(--color-orange);
+  cursor: pointer;
 }
