@@ -100,9 +100,7 @@ p {
   font-weight: var(--weight-medium);
 }
 /* common */
-.top {
-  top: 0;
-}
+
 /* spending slide bar */
 .slide-bar {
   position: absolute;

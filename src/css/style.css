@@ -195,6 +195,10 @@ main.total {
   background: var(--color-bg-white);
   box-shadow: 0px -5px 14px rgba(189, 144, 28, 0.08);
   border-radius: 30px 30px 0px 0px;
+  transition: top 0.3s ease-in;
+}
+.main-page .details.up {
+  top: 0;
 }
 .main-page .details > button {
   position: absolute;
