@@ -140,43 +140,22 @@ main.total {
   margin-right: 7px;
   margin-bottom: 8px;
 }
-/* spending slide bar */
-.main-page .card .slides .slide .slide-bar[name='spending'] {
+.main-page .card .slides .slide .slide-bar {
   width: 202px;
   height: 6px;
   border-radius: 3px;
-  background: var(--color-bg-grey);
-}
-.main-page
-  .card
-  .slides
-  .slide
-  .slide-bar[name='spending']::-webkit-slider-thumb {
-  width: 1px;
-  box-shadow: -202px 0 0 202px var(--color-yellow);
 }
 /* standard slide bar */
-.main-page .card .slides .slide .slide-bar[name='standard'] {
-  overflow: visible;
-  width: 202px;
-  height: 6px;
-  border-radius: 3px;
-  background: transparent;
-}
 .main-page
   .card
   .slides
   .slide
   .slide-bar[name='standard']::-webkit-slider-thumb {
-  box-sizing: content-box;
   width: 4px;
   height: 17px;
   border: 2px solid var(--color-white);
-  border-radius: 4px;
-  background: var(--color-orange);
-  cursor: pointer;
+  border-radius: 3px;
 }
-
 .main-page .card .remaining {
   text-align: center;
   padding-bottom: 7px;
@@ -302,8 +281,46 @@ main.total {
   padding: 33px 30px 12px;
 }
 .manage-page .manage-container {
+  overflow-y: scroll;
+  height: calc(100% - 79px);
   padding: 0 30px;
 }
+.manage-page .manage-container .standard .standard-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.manage-page .manage-container .standard .standard-container .price {
+  color: var(--color-orange);
+  font-weight: var(--font-medium);
+  font-size: var(--font-medium);
+}
+.manage-page .manage-container .standard .slide {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 28px;
+  margin: 23px 0 59px;
+}
+.manage-page .manage-container .standard .slide .slide-bar {
+  width: 100%;
+  height: 9px;
+  border-radius: 4.5px;
+}
+/* standard slide bar */
+.manage-page
+  .manage-container
+  .standard
+  .slide
+  .slide-bar[name='standard']::-webkit-slider-thumb {
+  width: 8px;
+  height: 28px;
+  border: 2px solid var(--color-light-beige);
+  border-radius: 4px;
+}
+
 .manage-page > button {
   position: absolute;
   top: 44px;

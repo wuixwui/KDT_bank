@@ -89,8 +89,8 @@
         </div>
       </div>
       <div class="app">
-        <!-- main -->
         <main class="total">
+          <!-- main -->
           <section class="main-page page">
             <header>
               <img
@@ -323,12 +323,32 @@
                   </div>
                 </div>
                 <div class="slide">
-                  <div class="slide__bar"></div>
+                  <input
+                    class="slide-bar"
+                    type="range"
+                    name="spending"
+                    value="75"
+                    min="0"
+                    max="1,500,000"
+                    onChange="rangeSlide(this.value)"
+                    onmousemove="rangeSlide(this.value)"
+                  />
+                  <!-- 사용자 지정 한계치 -->
+                  <input
+                    class="slide-bar"
+                    type="range"
+                    name="standard"
+                    value="0"
+                    min="0"
+                    max="1,500,000"
+                    onChange="rangeSlide(this.value)"
+                    onmousemove="rangeSlide(this.value)"
+                  />
                 </div>
               </div>
               <div class="daily-report">
                 <h3 class="title">일간 리포트</h3>
-                <div class="graph-container">
+                <div class="graph-container scroll-none">
                   <div class="graph"></div>
                 </div>
               </div>
