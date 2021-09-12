@@ -54,6 +54,10 @@ button {
   --weight-regular: 400;
   --weight-light: 300;
 }
+/* Js */
+:root {
+  --card-container-height: 257px;
+}
 
 /* Typography */
 body {
@@ -106,6 +110,15 @@ p {
   color: var(--color-dark);
 }
 /* Common */
+.page {
+  box-sizing: border-box;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  padding-top: 44px;
+}
 /* spending slide bar */
 .slide-bar {
   position: absolute;
@@ -117,10 +130,6 @@ p {
   -webkit-appearance: none;
 }
 
-/* Js */
-:root {
-  --card-container-height: 257px;
-}
 /* Cross browsing */
 /* scroll-none */
 .scroll-none {
