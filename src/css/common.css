@@ -2,24 +2,33 @@
 /* Reset */
 body {
   cursor: default;
+  line-height: 1.45;
 }
 a {
   color: inherit;
 }
 button {
+  margin: 0;
+  padding: 0;
   background: none;
   border: none;
   outline: none;
   cursor: pointer;
+}
+img {
+  display: block;
 }
 
 /* Global */
 :root {
   /* Color */
   --color-white: #ffffff;
+  --color-bg-white: #f5f5f5;
   --color-off-white: #eeece5;
-  --color-beige: #eeebe5;
+  --color-light-beige: #eeebe5;
+  --color-beige: #dccdb6;
   --color-yellow: #ffdb4c;
+  --color-yellow-shadow: #e2bf4230;
   --color-mustard: #feb700;
   --color-orange: #ff5f00;
   --color-light-green: #c4e7b8;
@@ -30,6 +39,8 @@ button {
   --color-violet: #c64cff;
   --color-light-grey: #dcdcdc;
   --color-grey: #858585;
+  --color-bg-light-grey: #dadada;
+  --color-bg-grey: #c4c4c4;
   --color-dark: #444444;
   --color-black: #000000;
 
@@ -44,34 +55,125 @@ button {
   --weight-bold: 700;
   --weight-medium: 500;
   --weight-regular: 400;
-  --weight-right: 300;
+  --weight-light: 300;
+}
+/* Js */
+:root {
+  --card-container-height: 257px;
 }
 
 /* Typography */
 body {
   font-family: 'Noto Sans KR', sans-serif;
 }
-
+button,
+a {
+  font-family: 'Noto Sans KR', sans-serif;
+}
 h1 {
   font-size: var(--font-regular);
   font-weight: var(--weight-medium);
   color: var(--color-black);
 }
-
 h2 {
   font-size: var(--font-medium);
   font-weight: var(--weight-medium);
   color: var(--color-black);
 }
-
 h3 {
   font-size: var(--font-regular);
   font-weight: var(--weight-medium);
   color: var(--color-dark);
 }
-
 p {
   font-size: var(--font-regular);
   font-weight: var(--weight-regular);
   color: var(--color-dark);
+}
+.btn-text {
+  font-size: var(--font-small);
+  font-weight: var(--weight-medium);
+  color: var(--color-black);
+}
+.sub-text {
+  color: var(--color-grey);
+  font-size: var(--font-small);
+  font-weight: var(--weight-medium);
+}
+.day .sub-text {
+  color: #b4b4b4;
+}
+.day__spendings .amount {
+  font-weight: var(--weight-light);
+}
+.plus {
+  color: var(--color-orange);
+}
+.minus {
+  color: var(--color-dark);
+}
+/* Common */
+.page {
+  box-sizing: border-box;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  padding-top: 44px;
+}
+/* spending slide bar */
+.slide-bar {
+  position: absolute;
+  -webkit-appearance: none;
+  outline: none;
+  overflow: hidden;
+}
+.slide-bar::-webkit-slider-thumb {
+  -webkit-appearance: none;
+}
+/* spending slide bar */
+.slide .slide-bar[name='spending'] {
+  background: var(--color-bg-grey);
+}
+
+.slide .slide-bar[name='spending']::-webkit-slider-thumb {
+  width: 1px;
+  box-shadow: -9999px 0 0 9999px var(--color-yellow);
+}
+/* standard slide bar */
+.slide .slide-bar[name='standard'] {
+  overflow: visible;
+  background: transparent;
+}
+.slide .slide-bar[name='standard']::-webkit-slider-thumb {
+  box-sizing: content-box;
+  background: var(--color-orange);
+  cursor: pointer;
+}
+
+/* Cross browsing */
+/* scroll-none */
+.scroll-none {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+.scroll-none::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera*/
+}
+/* firefox slide bar */
+.main-page .card .slides .slide .slide-bar[name='spending']::-moz-range-thumb {
+  width: 1px;
+  border: none;
+  background: var(--color-yellow);
+  box-shadow: -201px 0 0 201px var(--color-yellow);
+}
+.main-page .card .slides .slide .slide-bar[name='standard']::-moz-range-thumb {
+  box-sizing: content-box;
+  width: 4px;
+  height: 17px;
+  border: 2px solid var(--color-white);
+  border-radius: 4px;
+  background: var(--color-orange);
+  cursor: pointer;
 }
