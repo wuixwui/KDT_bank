@@ -320,6 +320,14 @@ main.total {
   border: 2px solid var(--color-light-beige);
   border-radius: 4px;
 }
+.manage-page .manage-container .daily-report .graph-container {
+  overflow-x: scroll;
+  width: 100%;
+  height: 198px;
+  margin: 17px 0 46px;
+}
+.manage-page .manage-container .month-pattern {
+}
 
 .manage-page > button {
   position: absolute;
