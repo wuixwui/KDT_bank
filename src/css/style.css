@@ -293,6 +293,22 @@ main.total {
 /* manage */
 .manage-page {
   background: var(--color-white);
+  transition: top 0.5s ease-in;
+}
+.manage-page.close {
+  top: 100%;
+}
+.manage-page > header h2 {
+  padding: 33px 30px 12px;
+}
+.manage-page .manage-container {
+  padding: 0 30px;
+}
+.manage-page > button {
+  position: absolute;
+  top: 44px;
+  right: 15px;
+  font-weight: var(--weight-light);
 }
 
 /* nav */
