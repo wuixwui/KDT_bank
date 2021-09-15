@@ -42,13 +42,22 @@ const userSwiper = new Swiper('.app', {
   },
 });
 
-const piggyBankSwiper = new Swiper('.piggy-bank', {
+//slider
+// piggy bank swiper
+const piggyBankSliderSwiper = new Swiper('.piggy-bank', {
   direction: 'horizontal',
   slidesPerView: 'auto',
   freeMode: true,
   mousewheel: true,
 });
 
+//vertical slider
+const verticalSliderSwiper = new Swiper('.vertical', {
+  direction: 'vertical',
+  slidesPerView: 'auto',
+  freeMode: true,
+  mousewheel: true,
+});
 // ---------- chart -----------
 const bankDataRequestURL = 'https://syoon0624.github.io/json/test.json';
 

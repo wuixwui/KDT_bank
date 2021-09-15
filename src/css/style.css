@@ -18,7 +18,7 @@ body {
 /* ----------- phone bar ----------- */
 .phone-bar {
   position: absolute;
-  z-index: 2;
+  z-index: 3;
   top: 0;
   left: 0;
   display: flex;
@@ -27,6 +27,7 @@ body {
   height: 20px;
   padding: 12px 15px;
 }
+
 /* clock */
 .phone-bar .current-time {
   margin-left: 15px;
@@ -281,8 +282,8 @@ main {
 /* ----------- day spending ----------- */
 .main-page .details .day-container {
   height: calc(100% - 60px);
-  overflow-y: scroll;
 }
+
 .day-container .day:not(:last-child) {
   margin-bottom: 38px;
 }
@@ -307,6 +308,7 @@ main {
 
 /* ----------- manage ----------- */
 .manage-page {
+  z-index: 2;
   background: var(--color-white);
   transition: top 0.5s ease-in;
 }

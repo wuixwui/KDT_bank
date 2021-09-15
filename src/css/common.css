@@ -158,6 +158,12 @@ p {
   cursor: pointer;
 }
 
+/* SWIPER */
+.vertical .swiper-slide {
+  height: fit-content;
+  height: -moz-fit-content;
+}
+
 /* CROSS BROWSING */
 /* ----------- firefox slide bar ----------- */
 .main-page .card .slides .slide .slide-bar[name='spending']::-moz-range-thumb {
