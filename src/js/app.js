@@ -30,6 +30,9 @@ spendingDetailToggleBtn.addEventListener('click', () => {
 // user page swiper
 const userSwiper = new Swiper('.app', {
   grabCursor: true,
+  threshold: 150,
+  edgeSwipeThreshold: 30,
+  loop: true,
   effect: 'creative',
   creativeEffect: {
     prev: {
@@ -45,6 +48,7 @@ const userSwiper = new Swiper('.app', {
 //slider
 // piggy bank swiper
 const piggyBankSliderSwiper = new Swiper('.piggy-bank', {
+  nested: true,
   direction: 'horizontal',
   slidesPerView: 'auto',
   freeMode: true,
