@@ -102,7 +102,12 @@ main {
   border-radius: 50%;
 }
 .main-page > header .header-right {
+  display: flex;
+  align-items: center;
+}
+.main-page > header .header-right > a {
   /* 인라인 요소 간격 없애기 */
+  display: block;
   font-size: 0;
 }
 .main-page > header .header-right > *:not(:last-child) {
