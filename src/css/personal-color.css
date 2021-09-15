@@ -1,7 +1,6 @@
 /* ----- user1 ----- */
 /* slide bar color */
 .user1 .slide .slide-bar[name='spending']::-webkit-slider-thumb {
-  width: 1px;
   box-shadow: -9999px 0 0 9999px var(--color-yellow);
 }
 
@@ -17,7 +16,6 @@
 /* ----- user2 ----- */
 /* slide bar color */
 .user2 .slide .slide-bar[name='spending']::-webkit-slider-thumb {
-  width: 1px;
   box-shadow: -9999px 0 0 9999px var(--color-blue);
 }
 
@@ -33,7 +31,6 @@
 /* ----- user3 ----- */
 /* slide bar color */
 .user3 .slide .slide-bar[name='spending']::-webkit-slider-thumb {
-  width: 1px;
   box-shadow: -9999px 0 0 9999px var(--color-violet);
 }
 

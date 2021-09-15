@@ -141,6 +141,10 @@ p {
 .slide .slide-bar[name='spending'] {
   background: var(--color-bg-grey);
 }
+.slide .slide-bar[name='spending']::-webkit-slider-thumb {
+  width: 1px;
+  background: transparent;
+}
 
 /* ----------- [standard] slide bar ----------- */
 .slide .slide-bar[name='standard'] {
