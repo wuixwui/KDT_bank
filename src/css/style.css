@@ -60,7 +60,7 @@ body {
 
 /* ----------- main ----------- */
 /* swiper container */
-.app .swiper-wrapper {
+.app .app-container {
   overflow: hidden;
   height: calc(100% - 76px);
   margin-bottom: 76px;
@@ -220,11 +220,13 @@ main {
 }
 
 /* ----------- piggy bank ----------- */
-.main-page .details .piggy-bank {
-  display: flex;
-  overflow-x: scroll;
-  overflow-y: hidden;
+.main-page .details .piggy-bank .swiper-slide {
+  width: fit-content;
+  width: -moz-fit-content;
   margin-bottom: 13px;
+}
+.main-page .details .piggy-bank .piggy-bank-container {
+  display: flex;
 }
 .main-page .details .slides {
   display: flex;

@@ -27,7 +27,8 @@ spendingDetailToggleBtn.addEventListener('click', () => {
 });
 
 // ---------- Swiper ----------
-let swiper = new Swiper('.app', {
+// user page swiper
+const userSwiper = new Swiper('.app', {
   grabCursor: true,
   effect: 'creative',
   creativeEffect: {
@@ -39,6 +40,13 @@ let swiper = new Swiper('.app', {
       translate: ['100%', 0, 0],
     },
   },
+});
+
+const piggyBankSwiper = new Swiper('.piggy-bank', {
+  direction: 'horizontal',
+  slidesPerView: 'auto',
+  freeMode: true,
+  mousewheel: true,
 });
 
 // ---------- chart -----------
