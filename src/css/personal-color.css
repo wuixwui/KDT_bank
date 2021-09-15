@@ -13,6 +13,7 @@
   width: 80%;
   background: var(--color-mustard);
 }
+
 /* ----- user2 ----- */
 /* slide bar color */
 .user2 .slide .slide-bar[name='spending']::-webkit-slider-thumb {
@@ -28,6 +29,7 @@
   width: 80%;
   background: var(--color-dark-green);
 }
+
 /* ----- user3 ----- */
 /* slide bar color */
 .user3 .slide .slide-bar[name='spending']::-webkit-slider-thumb {
