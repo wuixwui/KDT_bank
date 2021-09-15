@@ -1,8 +1,6 @@
 /* ----------- layout ----------- */
 body {
   background: var(--color-black);
-  width: 100vw;
-  height: 100vh;
 }
 
 /* ----------- phone display ----------- */
@@ -10,8 +8,8 @@ body {
   position: relative;
   overflow: hidden;
   min-width: 375px;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   border-radius: 40px;
 }
 
@@ -199,7 +197,6 @@ main {
 .main-page .details {
   box-sizing: border-box;
   position: absolute;
-  top: var(--card-container-height);
   left: 0;
   width: 100%;
   height: 100%;
@@ -207,13 +204,10 @@ main {
   background: var(--color-bg-white);
   box-shadow: 0px -5px 14px rgba(189, 144, 28, 0.08);
   border-radius: 30px 30px 0px 0px;
-  transition: top 0.3s ease-in;
+  transform: none;
+  transition: 0.3s ease-in;
 }
 
-/* 더보기 버튼 - 애니메이션 */
-.main-page .details.up {
-  top: 0;
-}
 .main-page .details > button {
   position: absolute;
   top: 4px;
@@ -318,7 +312,6 @@ main {
 
 /* manage container */
 .manage-page .manage-container {
-  overflow-y: scroll;
   height: calc(100% - 110px);
   padding: 0 30px 31px;
 }
