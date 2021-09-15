@@ -142,11 +142,6 @@ p {
   background: var(--color-bg-grey);
 }
 
-.slide .slide-bar[name='spending']::-webkit-slider-thumb {
-  width: 1px;
-  box-shadow: -9999px 0 0 9999px var(--color-yellow);
-}
-
 /* ----------- [standard] slide bar ----------- */
 .slide .slide-bar[name='standard'] {
   overflow: visible;

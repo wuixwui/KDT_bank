@@ -274,16 +274,6 @@ main {
   font-size: var(--font-micro);
 }
 
-/* piggy bank amount */
-.main-page .details .slides .slide:nth-child(1) .gauge {
-  width: 65%;
-  background: var(--color-orange);
-}
-.main-page .details .slides .slide:nth-child(2) .gauge {
-  width: 80%;
-  background: var(--color-mustard);
-}
-
 /* ----------- day spending ----------- */
 .main-page .details .day-container {
   height: calc(100% - 60px);
