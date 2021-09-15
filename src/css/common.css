@@ -1,5 +1,5 @@
-/* Initial settings */
-/* Reset */
+/* INITIAL SETTING*/
+/* ----------- Extra reset settings ----------- */
 body {
   cursor: default;
   line-height: 1.45;
@@ -19,9 +19,9 @@ img {
   display: block;
 }
 
-/* Global */
+/* GLOBAL */
 :root {
-  /* Color */
+  /* ----------- Color ----------- */
   --color-white: #ffffff;
   --color-bg-white: #f5f5f5;
   --color-off-white: #eeece5;
@@ -44,14 +44,14 @@ img {
   --color-dark: #444444;
   --color-black: #000000;
 
-  /* Font size */
+  /* ----------- Font size ----------- */
   --font-large: 36px;
   --font-medium: 24px;
   --font-regular: 18px;
   --font-small: 14px;
   --font-micro: 12px;
 
-  /* Font weight */
+  /* ----------- Font weight ----------- */
   --weight-bold: 700;
   --weight-medium: 500;
   --weight-regular: 400;
@@ -62,7 +62,7 @@ img {
   --card-container-height: 257px;
 }
 
-/* Typography */
+/* ----------- Typography ----------- */
 body {
   font-family: 'Noto Sans KR', sans-serif;
 }
@@ -106,13 +106,16 @@ p {
 .day__spendings .amount {
   font-weight: var(--weight-light);
 }
+/* day spending list color setting */
 .plus {
   color: var(--color-orange);
 }
 .minus {
   color: var(--color-dark);
 }
-/* Common */
+
+/* COMMON */
+/*  ----------- Pages default setting ----------- */
 .page {
   box-sizing: border-box;
   position: absolute;
@@ -122,7 +125,8 @@ p {
   width: 100%;
   padding-top: 44px;
 }
-/* spending slide bar */
+
+/* ----------- Spending slide bar default settings ----------- */
 .slide-bar {
   position: absolute;
   -webkit-appearance: none;
@@ -132,7 +136,8 @@ p {
 .slide-bar::-webkit-slider-thumb {
   -webkit-appearance: none;
 }
-/* spending slide bar */
+
+/* ----------- [spending] slide bar ----------- */
 .slide .slide-bar[name='spending'] {
   background: var(--color-bg-grey);
 }
@@ -141,7 +146,8 @@ p {
   width: 1px;
   box-shadow: -9999px 0 0 9999px var(--color-yellow);
 }
-/* standard slide bar */
+
+/* ----------- [standard] slide bar ----------- */
 .slide .slide-bar[name='standard'] {
   overflow: visible;
   background: transparent;
@@ -152,16 +158,8 @@ p {
   cursor: pointer;
 }
 
-/* Cross browsing */
-/* scroll-none */
-.scroll-none {
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
-}
-.scroll-none::-webkit-scrollbar {
-  display: none; /* Chrome, Safari, Opera*/
-}
-/* firefox slide bar */
+/* CROSS BROWSING */
+/* ----------- firefox slide bar ----------- */
 .main-page .card .slides .slide .slide-bar[name='spending']::-moz-range-thumb {
   width: 1px;
   border: none;
@@ -176,4 +174,13 @@ p {
   border-radius: 4px;
   background: var(--color-orange);
   cursor: pointer;
+}
+
+/* ----------- scroll-none ----------- */
+.scroll-none {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+.scroll-none::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera*/
 }

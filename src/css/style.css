@@ -1,9 +1,11 @@
+/* ----------- layout ----------- */
 body {
-  background: var(--color-blue);
+  background: var(--color-black);
   width: 100vw;
   height: 100vh;
 }
-/* phone */
+
+/* ----------- phone display ----------- */
 .phone-container {
   position: relative;
   overflow: hidden;
@@ -12,9 +14,11 @@ body {
   height: 100%;
   border-radius: 40px;
 }
+
+/* ----------- phone bar ----------- */
 .phone-bar {
   position: absolute;
-  z-index: 1;
+  z-index: 2;
   top: 0;
   left: 0;
   display: flex;
@@ -23,6 +27,7 @@ body {
   height: 20px;
   padding: 12px 15px;
 }
+/* clock */
 .phone-bar .current-time {
   margin-left: 15px;
   font-size: 15px;
@@ -34,45 +39,61 @@ body {
   width: 17px;
   text-align: right;
 }
+
+/* state */
 .phone-bar .phone-state {
   font-size: 0;
 }
 .phone-bar .phone-state > *:not(:last-child) {
   margin-right: 5px;
 }
-/* app */
+
+/* ----------- app ----------- */
 .app {
+  /* swiper layout property 
   position: relative;
   overflow: hidden;
+  z-index:1;
+  */
   height: 100%;
 }
-/* main */
+
+/* ----------- main ----------- */
+/* swiper container */
+.app .swiper-wrapper {
+  overflow: hidden;
+  height: calc(100% - 76px);
+  margin-bottom: 76px;
+}
+
+/* ----------- personal page ----------- */
+/* swiper-slide size */
 main.total {
   position: relative;
   overflow: hidden;
-  height: calc(100% - 120px);
-  padding-top: 44px;
+  height: 100%;
   margin-bottom: 76px;
 }
-.page {
-  box-sizing: border-box;
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
+/* ----------- details container ----------- */
+/* 지출 목록 페이지가 올라오는 높이의 기준점 */
+.main-page .details-container {
+  position: relative;
+  overflow: hidden;
   width: 100%;
-  padding-top: 44px;
+  height: calc(100% - 55px);
 }
+/* ----------- main-page ----------- */
 .main-page {
   background: var(--color-light-beige);
 }
-/* main-page */
+/* main page header */
 .main-page > header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin: 12px 21px 0 27px;
 }
+/* user image */
 .main-page > header .header-left {
   box-sizing: border-box;
   width: 43px;
@@ -80,20 +101,16 @@ main.total {
   border-radius: 50%;
 }
 .main-page > header .header-right {
+  /* 인라인 요소 간격 없애기 */
   font-size: 0;
 }
 .main-page > header .header-right > *:not(:last-child) {
   margin-right: 18px;
 }
-/* details container */
-.main-page .details-container {
-  position: relative;
-  overflow: hidden;
-  width: 100%;
-  height: calc(100% - 55px);
-}
-/* card */
+
+/* ----------- card ----------- */
 .main-page .card-container {
+  /* card와 margin collapse 방지 */
   padding: 1px 0;
 }
 .main-page .card {
@@ -103,6 +120,7 @@ main.total {
   border-radius: 12px;
   box-shadow: 0px 0px 16px 0px var(--color-yellow-shadow);
 }
+/* 계좌번호 - 이체버튼 */
 .main-page .card .account {
   padding-top: 14px;
   text-align: center;
@@ -112,6 +130,7 @@ main.total {
   top: 14px;
   right: 17px;
 }
+/* 현재 사용 금액 */
 .main-page .card .amount {
   margin: 17px 0;
   text-align: center;
@@ -125,6 +144,8 @@ main.total {
   text-align: right;
   font-size: var(--font-medium);
 }
+/* 슬라이드 바 */
+/* 공통 속성에 기본 설정 있음 */
 .main-page .card .slides {
   display: flex;
   align-items: center;
@@ -137,12 +158,13 @@ main.total {
   margin-right: 7px;
   margin-bottom: 8px;
 }
+
 .main-page .card .slides .slide .slide-bar {
   width: 202px;
   height: 6px;
   border-radius: 3px;
 }
-/* standard slide bar */
+/* standard slide bar pointer setting */
 .main-page
   .card
   .slides
@@ -153,18 +175,21 @@ main.total {
   border: 2px solid var(--color-white);
   border-radius: 3px;
 }
+
+/* 남은 기간 및 남은 금액 */
 .main-page .card .remaining {
   text-align: center;
   padding-bottom: 7px;
 }
-/* commercial */
+
+/* ----------- commercial ----------- */
 .main-page aside {
   width: fit-content;
   width: -moz-fit-content;
   margin: -7px auto 21px;
 }
 
-/* detail */
+/* ----------- detail ----------- */
 .main-page .details {
   box-sizing: border-box;
   position: absolute;
@@ -178,6 +203,8 @@ main.total {
   border-radius: 30px 30px 0px 0px;
   transition: top 0.3s ease-in;
 }
+
+/* 더보기 버튼 - 애니메이션 */
 .main-page .details.up {
   top: 0;
 }
@@ -191,7 +218,8 @@ main.total {
   background: var(--color-bg-grey);
   border-radius: 4px;
 }
-/* piggy bank */
+
+/* ----------- piggy bank ----------- */
 .main-page .details .piggy-bank {
   display: flex;
   overflow-x: scroll;
@@ -201,7 +229,8 @@ main.total {
 .main-page .details .slides {
   display: flex;
 }
-/* piggy-bank */
+
+/* piggy bank container */
 .piggy-bank .slide {
   overflow: hidden;
   width: 162px;
@@ -219,6 +248,8 @@ main.total {
   font-size: var(--font-micro);
   color: var(--color-white);
 }
+
+/* Create a piggy bank btn */
 .btn--piggy-bank {
   display: flex;
   justify-content: center;
@@ -234,6 +265,8 @@ main.total {
   color: var(--color-orange);
   font-size: var(--font-micro);
 }
+
+/* piggy bank amount */
 .main-page .details .slides .slide:nth-child(1) .gauge {
   width: 65%;
   background: var(--color-orange);
@@ -242,7 +275,8 @@ main.total {
   width: 80%;
   background: var(--color-mustard);
 }
-/* day spending */
+
+/* ----------- day spending ----------- */
 .main-page .details .day-container {
   height: calc(100% - 60px);
   overflow-y: scroll;
@@ -250,6 +284,7 @@ main.total {
 .day-container .day:not(:last-child) {
   margin-bottom: 38px;
 }
+/*  ----- day title ------  */
 .day-container .day .day__title {
   display: flex;
   justify-content: space-between;
@@ -258,6 +293,7 @@ main.total {
   font-size: var(--font-small);
   font-weight: var(--weight-bold);
 }
+/*  ----- day list ------  */
 .day-container .day .day__spendings {
   display: flex;
   justify-content: space-between;
@@ -266,7 +302,8 @@ main.total {
   padding: 8px 0;
   border-bottom: 1px solid var(--color-light-grey);
 }
-/* manage */
+
+/* ----------- manage ----------- */
 .manage-page {
   background: var(--color-white);
   transition: top 0.5s ease-in;
@@ -274,14 +311,20 @@ main.total {
 .manage-page.close {
   top: 100%;
 }
+
+/* header */
 .manage-page > header h2 {
   padding: 33px 30px 12px;
 }
+
+/* manage container */
 .manage-page .manage-container {
   overflow-y: scroll;
   height: calc(100% - 110px);
   padding: 0 30px 31px;
 }
+
+/* ----------- 기준 금액 설정 ----------- */
 .manage-page .manage-container .standard .standard-container {
   display: flex;
   justify-content: space-between;
@@ -292,6 +335,8 @@ main.total {
   font-weight: var(--font-medium);
   font-size: var(--font-medium);
 }
+/* 기준 금액 슬라이드 바 */
+/* 카드의 슬라이드 바와 동일한 값을 가지고 있어야 한다. */
 .manage-page .manage-container .standard .slide {
   position: relative;
   display: flex;
@@ -306,7 +351,7 @@ main.total {
   height: 9px;
   border-radius: 4.5px;
 }
-/* standard slide bar */
+/* standard slide bar pointer setting*/
 .manage-page
   .manage-container
   .standard
@@ -317,16 +362,22 @@ main.total {
   border: 2px solid var(--color-light-beige);
   border-radius: 4px;
 }
+
+/* ----------- 일간 리포트 ----------- */
 .manage-page .manage-container .daily-report .graph-container {
   overflow-x: scroll;
   width: 100%;
   height: 198px;
   margin: 17px 0 46px;
 }
+/* ----------- 한달 지출 패턴 ----------- */
+/* 그래프 */
 .manage-page .manage-container .month-pattern .graph {
   width: 308px;
   margin: 18px auto 14px;
 }
+
+/* 리스트 */
 .manage-page .manage-container .month-pattern .category {
   display: flex;
   align-items: center;
@@ -335,6 +386,7 @@ main.total {
 .manage-page .manage-container .month-pattern .category > * {
   overflow: hidden;
 }
+
 .manage-page .manage-container .month-pattern .category .category__img {
   flex-basis: 28px;
   display: flex;
@@ -349,6 +401,8 @@ main.total {
   text-align: right;
   color: var(--color-grey);
 }
+
+/* ----------- close btn ----------- */
 .manage-page > button {
   position: absolute;
   top: 44px;
@@ -356,7 +410,7 @@ main.total {
   font-weight: var(--weight-light);
 }
 
-/* nav */
+/* ----------- nav  ----------- */
 .app nav ul {
   position: absolute;
   bottom: 0;
@@ -381,6 +435,8 @@ main.total {
   width: 100%;
   height: 100%;
 }
+
+/* event */
 .app nav ul li a:active > svg path,
 .app nav ul li a:hover > svg path {
   fill: var(--color-dark-green);
