@@ -1,6 +1,6 @@
 /* ----------- layout ----------- */
 body {
-  background: var(--color-black);
+  background: var(--color-light-beige);
 }
 
 /* ----------- phone display ----------- */
@@ -10,7 +10,6 @@ body {
   min-width: 375px;
   width: 100vw;
   height: 100vh;
-  border-radius: 40px;
 }
 
 /* ----------- phone bar ----------- */
