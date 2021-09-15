@@ -1,3 +1,4 @@
+// ---------- BTN ----------
 // 지출 관리 버튼
 const spendingManage = document.querySelector('.manage-page');
 const spendingManageOpenBtn = document.querySelector('.btn--spending');
@@ -25,7 +26,22 @@ spendingDetailToggleBtn.addEventListener('click', () => {
   spendingDetail.classList.toggle('up');
 });
 
-// chart
+// ---------- Swiper ----------
+let swiper = new Swiper('.app', {
+  grabCursor: true,
+  effect: 'creative',
+  creativeEffect: {
+    prev: {
+      shadow: true,
+      translate: ['-20%', 0, -1],
+    },
+    next: {
+      translate: ['100%', 0, 0],
+    },
+  },
+});
+
+// ---------- chart -----------
 const bankDataRequestURL = 'https://syoon0624.github.io/json/test.json';
 
 const BankDataRequest = new XMLHttpRequest();

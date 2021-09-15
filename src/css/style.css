@@ -68,7 +68,7 @@ body {
 
 /* ----------- personal page ----------- */
 /* swiper-slide size */
-main.total {
+main {
   position: relative;
   overflow: hidden;
   height: 100%;
