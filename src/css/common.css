@@ -158,6 +158,10 @@ p {
   height: fit-content;
   height: -moz-fit-content;
 }
+.horizontal .swiper-slide {
+  width: fit-content;
+  width: -moz-fit-content;
+}
 
 /* CROSS BROWSING */
 /* ----------- firefox slide bar ----------- */

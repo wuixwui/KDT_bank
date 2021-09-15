@@ -62,8 +62,8 @@ const userSwiper = new Swiper('.app', {
 });
 
 //slider
-// piggy bank swiper
-const piggyBankSliderSwiper = new Swiper('.piggy-bank', {
+// horizontal swiper
+const horizontalSliderSwiper = new Swiper('.horizontal', {
   grabCursor: true,
   direction: 'horizontal',
   slidesPerView: 'auto',
