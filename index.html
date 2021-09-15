@@ -29,7 +29,7 @@
     <link rel="stylesheet" href="./src/css/style.css" />
     <!-- user personal color css -->
     <link rel="stylesheet" href="./src/css/personal-color.css" />
-    <!-- swiper -->
+    <!-- swiper CDN -->
     <link
       rel="stylesheet"
       href="https://unpkg.com/swiper@7/swiper-bundle.min.css"
@@ -38,6 +38,10 @@
     <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
     <!-- js -->
     <script src="./src/js/app.js" defer></script>
+    <!-- swiper -->
+    <script src="./src/js/swiper.js" defer></script>
+    <!-- chart -->
+    <script src="./src/js/chart.js" defer></script>
   </head>
   <body>
     <div class="phone-container">
@@ -208,9 +212,9 @@
                 <section class="details">
                   <!-- drag and drop btn -->
                   <button></button>
-                  <article class="swiper piggy-bank">
+                  <article class="swiper horizontal">
                     <div class="swiper-wrapper">
-                      <div class="swiper-slide">
+                      <div class="swiper-slide piggy-bank">
                         <div class="piggy-bank-container">
                           <ul class="slides">
                             <li class="slide">
@@ -381,12 +385,14 @@
                     </div>
                     <div class="daily-report">
                       <h3 class="title">일간 리포트</h3>
-                      <div class="graph-container scroll-none">
-                        <div class="graph">
-                          <img
-                            src="./src/images/temp-graph/Bar-chart-vertical.png"
-                            alt="일간 리포트 바 그래프"
-                          />
+                      <div class="swiper horizontal">
+                        <div class="swiper-wrapper graph-container">
+                          <div class="swiper-slide graph">
+                            <img
+                              src="./src/images/temp-graph/Bar-chart-vertical.png"
+                              alt="일간 리포트 바 그래프"
+                            />
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -479,7 +485,7 @@
               <header>
                 <img
                   src="./src/images/avatar/020122.jpg"
-                  alt="사용자2 이미지"
+                  alt="사용자1 이미지"
                   class="header-left"
                 />
                 <h1 class="title">생활비</h1>
@@ -581,9 +587,9 @@
                 <section class="details">
                   <!-- drag and drop btn -->
                   <button></button>
-                  <article class="swiper piggy-bank">
+                  <article class="swiper horizontal">
                     <div class="swiper-wrapper">
-                      <div class="swiper-slide">
+                      <div class="swiper-slide piggy-bank">
                         <div class="piggy-bank-container">
                           <ul class="slides">
                             <li class="slide">
@@ -754,12 +760,14 @@
                     </div>
                     <div class="daily-report">
                       <h3 class="title">일간 리포트</h3>
-                      <div class="graph-container scroll-none">
-                        <div class="graph">
-                          <img
-                            src="./src/images/temp-graph/Bar-chart-vertical.png"
-                            alt="일간 리포트 바 그래프"
-                          />
+                      <div class="swiper horizontal">
+                        <div class="swiper-wrapper graph-container">
+                          <div class="swiper-slide graph">
+                            <img
+                              src="./src/images/temp-graph/Bar-chart-vertical.png"
+                              alt="일간 리포트 바 그래프"
+                            />
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -852,7 +860,7 @@
               <header>
                 <img
                   src="./src/images/avatar/020396.jpg"
-                  alt="사용자3 이미지"
+                  alt="사용자1 이미지"
                   class="header-left"
                 />
                 <h1 class="title">생활비</h1>
@@ -954,9 +962,9 @@
                 <section class="details">
                   <!-- drag and drop btn -->
                   <button></button>
-                  <article class="swiper piggy-bank">
+                  <article class="swiper horizontal">
                     <div class="swiper-wrapper">
-                      <div class="swiper-slide">
+                      <div class="swiper-slide piggy-bank">
                         <div class="piggy-bank-container">
                           <ul class="slides">
                             <li class="slide">
@@ -1127,12 +1135,14 @@
                     </div>
                     <div class="daily-report">
                       <h3 class="title">일간 리포트</h3>
-                      <div class="graph-container scroll-none">
-                        <div class="graph">
-                          <img
-                            src="./src/images/temp-graph/Bar-chart-vertical.png"
-                            alt="일간 리포트 바 그래프"
-                          />
+                      <div class="swiper horizontal">
+                        <div class="swiper-wrapper graph-container">
+                          <div class="swiper-slide graph">
+                            <img
+                              src="./src/images/temp-graph/Bar-chart-vertical.png"
+                              alt="일간 리포트 바 그래프"
+                            />
+                          </div>
                         </div>
                       </div>
                     </div>
