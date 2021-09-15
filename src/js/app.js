@@ -29,7 +29,7 @@ spendingDetailToggleBtn.addEventListener('click', () => {
 const bankDataRequestURL = 'https://syoon0624.github.io/json/test.json';
 
 const BankDataRequest = new XMLHttpRequest();
-// URL로 서버 데이타(json) 연결하기
+// URL로 서버 데이타(json) 연결하기 - response 생성?
 BankDataRequest.open('GET', bankDataRequestURL);
 BankDataRequest.responseType = 'json';
 // 서버에서 response 요청을 보냄
