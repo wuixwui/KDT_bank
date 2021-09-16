@@ -11,7 +11,6 @@ BankDataRequest.send();
 // onload를 통해 응답이 성공적으로 돌아왔을 때 작동할 코드 작성
 BankDataRequest.onload = function () {
   const BankList = BankDataRequest.response; // BankDataRequest.response는 서버의 json 파일 객체
-  console.log(BankList);
 };
 
 //데이터 조작
