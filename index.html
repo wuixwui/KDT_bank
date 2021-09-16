@@ -44,6 +44,8 @@
     <script src="./src/js/chart.js" defer></script>
     <!-- clock -->
     <script src="./src/js/clock.js" defer></script>
+    <!-- slide-bar -->
+    <script src="./src/js/slide-bar.js" defer></script>
   </head>
   <body>
     <div class="phone-container">
@@ -106,11 +108,7 @@
             <!-- main -->
             <section class="main-page page">
               <header>
-                <img
-                  src="./src/images/avatar/020092.jpg"
-                  alt="사용자1 이미지"
-                  class="header-left"
-                />
+                <div class="header-left">유저1 이미지</div>
                 <h1 class="title">생활비</h1>
                 <div class="header-right">
                   <!-- scan -->
@@ -151,32 +149,32 @@
                       <button class="btn--transfer btn-text">이체</button>
                     </p>
                     <div class="amount">
-                      <strong class="user-amount">1,240,000</strong> 원
+                      <strong class="standard-amount">1,240,000</strong> 원
                     </div>
                     <div class="slides">
                       <div class="slide">
                         <!-- 두 개의 슬라이드 바를 겹쳐서 사용: 사용한 금액이 밑 - 기준 금액이 위에 배치 -->
                         <!-- 사용한 값 합계 표시 -->
                         <input
+                          disabled
+                          readonly
                           class="slide-bar"
                           type="range"
                           name="spending"
                           value="75"
                           min="0"
-                          max="1,500,000"
-                          onChange="rangeSlide(this.value)"
-                          onmousemove="rangeSlide(this.value)"
+                          max="1500000"
                         />
                         <!-- 사용자 지정 한계치 -->
                         <input
+                          disabled
+                          readonly
                           class="slide-bar"
                           type="range"
                           name="standard"
                           value="0"
                           min="0"
-                          max="1,500,000"
-                          onChange="rangeSlide(this.value)"
-                          onmousemove="rangeSlide(this.value)"
+                          max="1500000"
                         />
                       </div>
                       <button class="btn--spending">
@@ -357,16 +355,14 @@
                           <strong class="standard-amount">2,100,000</strong> 원
                         </div>
                       </div>
-                      <div class="slide">
+                      <form class="slide">
                         <input
                           class="slide-bar"
                           type="range"
                           name="spending"
                           value="75"
                           min="0"
-                          max="1,500,000"
-                          onChange="rangeSlide(this.value)"
-                          onmousemove="rangeSlide(this.value)"
+                          max="1500000"
                         />
                         <!-- 사용자 지정 한계치 -->
                         <input
@@ -375,11 +371,12 @@
                           name="standard"
                           value="0"
                           min="0"
-                          max="1,500,000"
+                          step="100"
+                          max="1500000"
                           onChange="rangeSlide(this.value)"
                           onmousemove="rangeSlide(this.value)"
                         />
-                      </div>
+                      </form>
                     </div>
                     <div class="daily-report">
                       <h3 class="title">일간 리포트</h3>
@@ -477,15 +474,11 @@
             </section>
           </div>
           <!-- user2 -->
-          <div class="user2 swiper-slide">
+          <div class="user2swiper-slide">
             <!-- main -->
             <section class="main-page page">
               <header>
-                <img
-                  src="./src/images/avatar/020122.jpg"
-                  alt="사용자1 이미지"
-                  class="header-left"
-                />
+                <div class="header-left">유저1 이미지</div>
                 <h1 class="title">생활비</h1>
                 <div class="header-right">
                   <!-- scan -->
@@ -526,32 +519,32 @@
                       <button class="btn--transfer btn-text">이체</button>
                     </p>
                     <div class="amount">
-                      <strong class="user-amount">1,240,000</strong> 원
+                      <strong class="standard-amount">1,240,000</strong> 원
                     </div>
                     <div class="slides">
                       <div class="slide">
                         <!-- 두 개의 슬라이드 바를 겹쳐서 사용: 사용한 금액이 밑 - 기준 금액이 위에 배치 -->
                         <!-- 사용한 값 합계 표시 -->
                         <input
+                          disabled
+                          readonly
                           class="slide-bar"
                           type="range"
                           name="spending"
                           value="75"
                           min="0"
-                          max="1,500,000"
-                          onChange="rangeSlide(this.value)"
-                          onmousemove="rangeSlide(this.value)"
+                          max="1500000"
                         />
                         <!-- 사용자 지정 한계치 -->
                         <input
+                          disabled
+                          readonly
                           class="slide-bar"
                           type="range"
                           name="standard"
                           value="0"
                           min="0"
-                          max="1,500,000"
-                          onChange="rangeSlide(this.value)"
-                          onmousemove="rangeSlide(this.value)"
+                          max="1500000"
                         />
                       </div>
                       <button class="btn--spending">
@@ -732,16 +725,14 @@
                           <strong class="standard-amount">2,100,000</strong> 원
                         </div>
                       </div>
-                      <div class="slide">
+                      <form class="slide">
                         <input
                           class="slide-bar"
                           type="range"
                           name="spending"
                           value="75"
                           min="0"
-                          max="1,500,000"
-                          onChange="rangeSlide(this.value)"
-                          onmousemove="rangeSlide(this.value)"
+                          max="1500000"
                         />
                         <!-- 사용자 지정 한계치 -->
                         <input
@@ -750,11 +741,12 @@
                           name="standard"
                           value="0"
                           min="0"
-                          max="1,500,000"
+                          step="100"
+                          max="1500000"
                           onChange="rangeSlide(this.value)"
                           onmousemove="rangeSlide(this.value)"
                         />
-                      </div>
+                      </form>
                     </div>
                     <div class="daily-report">
                       <h3 class="title">일간 리포트</h3>
@@ -856,11 +848,7 @@
             <!-- main -->
             <section class="main-page page">
               <header>
-                <img
-                  src="./src/images/avatar/020396.jpg"
-                  alt="사용자1 이미지"
-                  class="header-left"
-                />
+                <div class="header-left">유저1 이미지</div>
                 <h1 class="title">생활비</h1>
                 <div class="header-right">
                   <!-- scan -->
@@ -901,32 +889,32 @@
                       <button class="btn--transfer btn-text">이체</button>
                     </p>
                     <div class="amount">
-                      <strong class="user-amount">1,240,000</strong> 원
+                      <strong class="standard-amount">1,240,000</strong> 원
                     </div>
                     <div class="slides">
                       <div class="slide">
                         <!-- 두 개의 슬라이드 바를 겹쳐서 사용: 사용한 금액이 밑 - 기준 금액이 위에 배치 -->
                         <!-- 사용한 값 합계 표시 -->
                         <input
+                          disabled
+                          readonly
                           class="slide-bar"
                           type="range"
                           name="spending"
                           value="75"
                           min="0"
-                          max="1,500,000"
-                          onChange="rangeSlide(this.value)"
-                          onmousemove="rangeSlide(this.value)"
+                          max="1500000"
                         />
                         <!-- 사용자 지정 한계치 -->
                         <input
+                          disabled
+                          readonly
                           class="slide-bar"
                           type="range"
                           name="standard"
                           value="0"
                           min="0"
-                          max="1,500,000"
-                          onChange="rangeSlide(this.value)"
-                          onmousemove="rangeSlide(this.value)"
+                          max="1500000"
                         />
                       </div>
                       <button class="btn--spending">
@@ -1107,16 +1095,14 @@
                           <strong class="standard-amount">2,100,000</strong> 원
                         </div>
                       </div>
-                      <div class="slide">
+                      <form class="slide">
                         <input
                           class="slide-bar"
                           type="range"
                           name="spending"
                           value="75"
                           min="0"
-                          max="1,500,000"
-                          onChange="rangeSlide(this.value)"
-                          onmousemove="rangeSlide(this.value)"
+                          max="1500000"
                         />
                         <!-- 사용자 지정 한계치 -->
                         <input
@@ -1125,11 +1111,12 @@
                           name="standard"
                           value="0"
                           min="0"
-                          max="1,500,000"
+                          step="100"
+                          max="1500000"
                           onChange="rangeSlide(this.value)"
                           onmousemove="rangeSlide(this.value)"
                         />
-                      </div>
+                      </form>
                     </div>
                     <div class="daily-report">
                       <h3 class="title">일간 리포트</h3>
