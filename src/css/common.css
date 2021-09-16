@@ -158,11 +158,11 @@ p {
 }
 
 /* SWIPER */
-.vertical .swiper-slide {
+.vertical .swiper-wrapper {
   height: fit-content;
   height: -moz-fit-content;
 }
-.horizontal .swiper-slide {
+.horizontal .swiper-wrapper {
   width: fit-content;
   width: -moz-fit-content;
 }

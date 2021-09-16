@@ -359,6 +359,11 @@ main {
   height: auto;
   margin: 17px 0 46px;
 }
+.manage-page .manage-container .daily-report .graph-container .graph {
+  width: fit-content;
+  width: -moz-fit-content;
+}
+
 /* ----------- 한달 지출 패턴 ----------- */
 /* 그래프 */
 .manage-page .manage-container .month-pattern .graph {
