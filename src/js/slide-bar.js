@@ -1,5 +1,4 @@
 // Slide bar
-const User1 = document.querySelector('.user1');
 
 const spendingSlideBar = User1.querySelectorAll('.slide-bar[name="spending"]');
 // 사용한 금액 입력
