@@ -158,12 +158,12 @@ p {
 }
 
 /* SWIPER */
-.vertical.swiper .swiper-wrapper {
+.vertical.swiper .swiper-slide {
   height: fit-content;
   height: -moz-fit-content;
   margin: 0;
 }
-.horizontal.swiper .swiper-wrapper {
+.horizontal.swiper .swiper-slide {
   width: fit-content;
   width: -moz-fit-content;
   margin: 0;
