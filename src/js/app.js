@@ -1,3 +1,6 @@
+// ----------- USER -----------
+const User1 = document.querySelector('.user1');
+
 // ---------- BTN ----------
 // 지출 관리 버튼
 const spendingManage = document.querySelectorAll('.manage-page');
