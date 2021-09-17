@@ -158,13 +158,15 @@ p {
 }
 
 /* SWIPER */
-.vertical .swiper-wrapper {
+.vertical.swiper .swiper-wrapper {
   height: fit-content;
   height: -moz-fit-content;
+  margin: 0;
 }
-.horizontal .swiper-wrapper {
+.horizontal.swiper .swiper-wrapper {
   width: fit-content;
   width: -moz-fit-content;
+  margin: 0;
 }
 
 /* CROSS BROWSING */
