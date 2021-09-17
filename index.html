@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -13,11 +13,7 @@
       rel="stylesheet"
     />
     <!-- favicon -->
-    <link
-      rel="shortcut icon"
-      href="./src/images/logo.png"
-      type="image/x-icon"
-    />
+    <link rel="icon" href="./src/images/logo.png" type="image/x-icon" />
     <!-- reset -->
     <link
       rel="stylesheet"
@@ -193,8 +189,9 @@
                       </button>
                     </div>
                     <p class="remaining sub-text">
-                      <span class="remaining-day">5</span>일 동안
-                      <span class="remaining-amount">10,000</span>원 남음
+                      <span class="remaining-day sub-text">5</span>일 동안
+                      <span class="remaining-amount sub-text">10,000</span>원
+                      남음
                     </p>
                   </div>
                   <aside>
@@ -255,82 +252,82 @@
                         <section class="day">
                           <header class="day__title">
                             <h3>오늘</h3>
-                            <p class="day__amount sub-text">
+                            <span class="day__amount sub-text">
                               <em class="day__sum">127,600</em>원 지출
-                            </p>
+                            </span>
                           </header>
                           <ol>
                             <li class="day__spendings">
-                              <p class="name">미스터 피자</p>
-                              <p class="amount minus">32,000</p>
+                              <span class="name">미스터 피자</span>
+                              <span class="amount minus">32,000</span>
                             </li>
                             <li class="day__spendings">
-                              <p class="name">택시</p>
-                              <p class="amount minus">4,800</p>
+                              <span class="name">택시</span>
+                              <span class="amount minus">4,800</span>
                             </li>
                             <li class="day__spendings">
-                              <p class="name">이마트</p>
-                              <p class="amount minus">86,000</p>
+                              <span class="name">이마트</span>
+                              <span class="amount minus">86,000</span>
                             </li>
                             <li class="day__spendings">
-                              <p class="name">스타벅스</p>
-                              <p class="amount minus">4,800</p>
+                              <span class="name">스타벅스</span>
+                              <span class="amount minus">4,800</span>
                             </li>
                             <li class="day__spendings">
-                              <p class="name">전길수</p>
-                              <p class="amount plus">+ 86,000</p>
+                              <span class="name">전길수</span>
+                              <span class="amount plus">+ 86,000</span>
                             </li>
                           </ol>
                         </section>
                         <section class="day yesterday">
                           <header class="day__title">
                             <h3>어제</h3>
-                            <p class="day__amount sub-text">
+                            <span class="day__amount sub-text">
                               <em class="day__sum">71,600</em>원 지출
-                            </p>
+                            </span>
                           </header>
                           <ol>
                             <li class="day__spendings">
-                              <p class="name">CU</p>
-                              <p class="amount minus">8,900</p>
+                              <span class="name">CU</span>
+                              <span class="amount minus">8,900</span>
                             </li>
                             <li class="day__spendings">
-                              <p class="name">김경남</p>
-                              <p class="amount plus">+ 31,000</p>
+                              <span class="name">김경남</span>
+                              <span class="amount plus">+ 31,000</span>
                             </li>
                             <li class="day__spendings">
-                              <p class="name">애슐리</p>
-                              <p class="amount minus">31,000</p>
+                              <span class="name">애슐리</span>
+                              <span class="amount minus">31,000</span>
                             </li>
                             <li class="day__spendings">
-                              <p class="name">교보문고</p>
-                              <p class="amount minus">18,000</p>
+                              <span class="name">교보문고</span>
+                              <span class="amount minus">18,000</span>
                             </li>
                             <li class="day__spendings">
-                              <p class="name">미스터 피자</p>
-                              <p class="amount minus">32,000</p>
+                              <span class="name">미스터 피자</span>
+                              <span class="amount minus">32,000</span>
                             </li>
                           </ol>
                         </section>
                         <section class="day 2days-ago">
                           <header class="day__title">
                             <h3>이틀 전</h3>
-                            <p class="day__amount sub-text">
+                            <span class="day__amount sub-text">
                               <em class="day__sum">64,000</em>원 지출
-                            </p>
+                            </span>
                           </header>
                           <ol>
                             <li class="day__spendings">
-                              <p class="name">알파문구</p>
-                              <p class="amount minus">46,000</p>
+                              <span class="name">알파문구</span>
+                              <span class="amount minus">46,000</span>
                             </li>
                             <li class="day__spendings">
-                              <p class="name">스타벅스</p>
-                              <p class="amount minus">18,000</p>
+                              <span class="name">스타벅스</span>
+                              <span class="amount minus">18,000</span>
                             </li>
                             <li class="day__spendings">
-                              <p class="name">미스터 피자</p>
-                              <p class="amount minus">32,000</p>
+                              <span class="name">미스터 피자</span>
+                              <span class="amount minus">32,000</span>
                             </li>
                           </ol>
                         </section>
@@ -352,7 +349,7 @@
                       <div class="standard-container">
                         <h3 class="title">기준 금액 설정</h3>
                         <div class="price">
-                          <strong class="standard-amount">2,100,000</strong> 원
+                          <strong class="standard-amount">0</strong> 원
                         </div>
                       </div>
                       <form class="slide">
@@ -410,10 +407,10 @@
                               alt="주유비 카테고리"
                             />
                           </div>
-                          <p class="category__name">주유비</p>
-                          <p class="category__amount">
+                          <span class="category__name">주유비</span>
+                          <span class="category__amount">
                             <em class="category-sum">56,000</em>원
-                          </p>
+                          </span>
                         </li>
                         <li class="category">
                           <div class="category__img">
@@ -422,10 +419,10 @@
                               alt="건강관리비 카테고리"
                             />
                           </div>
-                          <p class="category__name">건강관리비</p>
-                          <p class="category__amount">
+                          <span class="category__name">건강관리비</span>
+                          <span class="category__amount">
                             <em class="category-sum">80,000</em>원
-                          </p>
+                          </span>
                         </li>
                         <li class="category">
                           <div class="category__img">
@@ -434,10 +431,10 @@
                               alt="외식비 카테고리"
                             />
                           </div>
-                          <p class="category__name">외식비</p>
-                          <p class="category__amount">
+                          <span class="category__name">외식비</span>
+                          <spanp class="category__amount">
                             <em class="category-sum">233,000</em>원
-                          </p>
+                          </span>
                         </li>
                         <li class="category">
                           <div class="category__img">
@@ -447,10 +444,10 @@
                               class="category__img"
                             />
                           </div>
-                          <p class="category__name">장보기</p>
-                          <p class="category__amount">
+                          <span class="category__name">장보기</span>
+                          <span class="category__amount">
                             <em class="category-sum">390,000</em>원
-                          </p>
+                          </span>
                         </li>
                         <li class="category">
                           <div class="category__img">
@@ -460,10 +457,10 @@
                               class="category__img"
                             />
                           </div>
-                          <p class="category__name">상점</p>
-                          <p class="category__amount">
+                          <span class="category__name">상점</span>
+                          <span class="category__amount">
                             <em class="category-sum">46,000</em>원
-                          </p>
+                          </span>
                         </li>
                       </ul>
                     </div>
@@ -519,7 +516,7 @@
                       <button class="btn--transfer btn-text">이체</button>
                     </p>
                     <div class="amount">
-                      <strong class="standard-amount">1,240,000</strong> 원
+                      <strong class="standard-amount">0</strong> 원
                     </div>
                     <div class="slides">
                       <div class="slide">
@@ -531,7 +528,7 @@
                           class="slide-bar"
                           type="range"
                           name="spending"
-                          value="1240000"
+                          value="0"
                           min="0"
                           max="1500000"
                         />
@@ -542,7 +539,7 @@
                           class="slide-bar"
                           type="range"
                           name="standard"
-                          value="1000000"
+                          value="0"
                           min="0"
                           max="1500000"
                         />
@@ -563,8 +560,9 @@
                       </button>
                     </div>
                     <p class="remaining sub-text">
-                      <span class="remaining-day">5</span>일 동안
-                      <span class="remaining-amount">10,000</span>원 남음
+                      <span class="remaining-day sub-text">5</span>일 동안
+                      <span class="remaining-amount sub-text">10,000</span>원
+                      남음
                     </p>
                   </div>
                   <aside>
@@ -625,82 +623,82 @@
                         <section class="day">
                           <header class="day__title">
                             <h3>오늘</h3>
-                            <p class="day__amount sub-text">
+                            <span class="day__amount sub-text">
                               <em class="day__sum">127,600</em>원 지출
-                            </p>
+                            </span>
                           </header>
                           <ol>
                             <li class="day__spendings">
-                              <p class="name">미스터 피자</p>
-                              <p class="amount minus">32,000</p>
+                              <span class="name">미스터 피자</span>
+                              <span class="amount minus">32,000</span>
                             </li>
                             <li class="day__spendings">
-                              <p class="name">택시</p>
-                              <p class="amount minus">4,800</p>
+                              <span class="name">택시</span>
+                              <span class="amount minus">4,800</span>
                             </li>
                             <li class="day__spendings">
-                              <p class="name">이마트</p>
-                              <p class="amount minus">86,000</p>
+                              <span class="name">이마트</span>
+                              <span class="amount minus">86,000</span>
                             </li>
                             <li class="day__spendings">
-                              <p class="name">스타벅스</p>
-                              <p class="amount minus">4,800</p>
+                              <span class="name">스타벅스</span>
+                              <span class="amount minus">4,800</span>
                             </li>
                             <li class="day__spendings">
-                              <p class="name">전길수</p>
-                              <p class="amount plus">+ 86,000</p>
+                              <span class="name">전길수</span>
+                              <span class="amount plus">+ 86,000</span>
                             </li>
                           </ol>
                         </section>
                         <section class="day yesterday">
                           <header class="day__title">
                             <h3>어제</h3>
-                            <p class="day__amount sub-text">
+                            <span class="day__amount sub-text">
                               <em class="day__sum">71,600</em>원 지출
-                            </p>
+                            </span>
                           </header>
                           <ol>
                             <li class="day__spendings">
-                              <p class="name">CU</p>
-                              <p class="amount minus">8,900</p>
+                              <span class="name">CU</span>
+                              <span class="amount minus">8,900</span>
                             </li>
                             <li class="day__spendings">
-                              <p class="name">김경남</p>
-                              <p class="amount plus">+ 31,000</p>
+                              <span class="name">김경남</span>
+                              <span class="amount plus">+ 31,000</span>
                             </li>
                             <li class="day__spendings">
-                              <p class="name">애슐리</p>
-                              <p class="amount minus">31,000</p>
+                              <span class="name">애슐리</span>
+                              <span class="amount minus">31,000</span>
                             </li>
                             <li class="day__spendings">
-                              <p class="name">교보문고</p>
-                              <p class="amount minus">18,000</p>
+                              <span class="name">교보문고</span>
+                              <span class="amount minus">18,000</span>
                             </li>
                             <li class="day__spendings">
-                              <p class="name">미스터 피자</p>
-                              <p class="amount minus">32,000</p>
+                              <span class="name">미스터 피자</span>
+                              <span class="amount minus">32,000</span>
                             </li>
                           </ol>
                         </section>
                         <section class="day 2days-ago">
                           <header class="day__title">
                             <h3>이틀 전</h3>
-                            <p class="day__amount sub-text">
+                            <span class="day__amount sub-text">
                               <em class="day__sum">64,000</em>원 지출
-                            </p>
+                            </span>
                           </header>
                           <ol>
                             <li class="day__spendings">
-                              <p class="name">알파문구</p>
-                              <p class="amount minus">46,000</p>
+                              <span class="name">알파문구</span>
+                              <span class="amount minus">46,000</span>
                             </li>
                             <li class="day__spendings">
-                              <p class="name">스타벅스</p>
-                              <p class="amount minus">18,000</p>
+                              <span class="name">스타벅스</span>
+                              <span class="amount minus">18,000</span>
                             </li>
                             <li class="day__spendings">
-                              <p class="name">미스터 피자</p>
-                              <p class="amount minus">32,000</p>
+                              <span class="name">미스터 피자</span>
+                              <span class="amount minus">32,000</span>
                             </li>
                           </ol>
                         </section>
@@ -722,7 +720,7 @@
                       <div class="standard-container">
                         <h3 class="title">기준 금액 설정</h3>
                         <div class="price">
-                          <strong class="standard-amount">2,100,000</strong> 원
+                          <strong class="standard-amount">0</strong> 원
                         </div>
                       </div>
                       <form class="slide">
@@ -730,7 +728,7 @@
                           class="slide-bar"
                           type="range"
                           name="spending"
-                          value="1240000"
+                          value="0"
                           min="0"
                           max="1500000"
                         />
@@ -739,7 +737,7 @@
                           class="slide-bar"
                           type="range"
                           name="standard"
-                          value="1000000"
+                          value="0"
                           min="0"
                           step="100"
                           max="1500000"
@@ -780,10 +778,10 @@
                               alt="주유비 카테고리"
                             />
                           </div>
-                          <p class="category__name">주유비</p>
-                          <p class="category__amount">
+                          <span class="category__name">주유비</span>
+                          <span class="category__amount">
                             <em class="category-sum">56,000</em>원
-                          </p>
+                          </span>
                         </li>
                         <li class="category">
                           <div class="category__img">
@@ -792,10 +790,10 @@
                               alt="건강관리비 카테고리"
                             />
                           </div>
-                          <p class="category__name">건강관리비</p>
-                          <p class="category__amount">
+                          <span class="category__name">건강관리비</span>
+                          <span class="category__amount">
                             <em class="category-sum">80,000</em>원
-                          </p>
+                          </span>
                         </li>
                         <li class="category">
                           <div class="category__img">
@@ -804,10 +802,10 @@
                               alt="외식비 카테고리"
                             />
                           </div>
-                          <p class="category__name">외식비</p>
-                          <p class="category__amount">
+                          <span class="category__name">외식비</span>
+                          <spanp class="category__amount">
                             <em class="category-sum">233,000</em>원
-                          </p>
+                          </span>
                         </li>
                         <li class="category">
                           <div class="category__img">
@@ -817,10 +815,10 @@
                               class="category__img"
                             />
                           </div>
-                          <p class="category__name">장보기</p>
-                          <p class="category__amount">
+                          <span class="category__name">장보기</span>
+                          <span class="category__amount">
                             <em class="category-sum">390,000</em>원
-                          </p>
+                          </span>
                         </li>
                         <li class="category">
                           <div class="category__img">
@@ -830,10 +828,10 @@
                               class="category__img"
                             />
                           </div>
-                          <p class="category__name">상점</p>
-                          <p class="category__amount">
+                          <span class="category__name">상점</span>
+                          <span class="category__amount">
                             <em class="category-sum">46,000</em>원
-                          </p>
+                          </span>
                         </li>
                       </ul>
                     </div>
@@ -889,7 +887,7 @@
                       <button class="btn--transfer btn-text">이체</button>
                     </p>
                     <div class="amount">
-                      <strong class="standard-amount">1,240,000</strong> 원
+                      <strong class="standard-amount">0</strong> 원
                     </div>
                     <div class="slides">
                       <div class="slide">
@@ -901,7 +899,7 @@
                           class="slide-bar"
                           type="range"
                           name="spending"
-                          value="1240000"
+                          value="0"
                           min="0"
                           max="1500000"
                         />
@@ -912,7 +910,7 @@
                           class="slide-bar"
                           type="range"
                           name="standard"
-                          value="1000000"
+                          value="0"
                           min="0"
                           max="1500000"
                         />
@@ -933,8 +931,9 @@
                       </button>
                     </div>
                     <p class="remaining sub-text">
-                      <span class="remaining-day">5</span>일 동안
-                      <span class="remaining-amount">10,000</span>원 남음
+                      <span class="remaining-day sub-text">5</span>일 동안
+                      <span class="remaining-amount sub-text">10,000</span>원
+                      남음
                     </p>
                   </div>
                   <aside>
@@ -995,82 +994,82 @@
                         <section class="day">
                           <header class="day__title">
                             <h3>오늘</h3>
-                            <p class="day__amount sub-text">
+                            <span class="day__amount sub-text">
                               <em class="day__sum">127,600</em>원 지출
-                            </p>
+                            </span>
                           </header>
                           <ol>
                             <li class="day__spendings">
-                              <p class="name">미스터 피자</p>
-                              <p class="amount minus">32,000</p>
+                              <span class="name">미스터 피자</span>
+                              <span class="amount minus">32,000</span>
                             </li>
                             <li class="day__spendings">
-                              <p class="name">택시</p>
-                              <p class="amount minus">4,800</p>
+                              <span class="name">택시</span>
+                              <span class="amount minus">4,800</span>
                             </li>
                             <li class="day__spendings">
-                              <p class="name">이마트</p>
-                              <p class="amount minus">86,000</p>
+                              <span class="name">이마트</span>
+                              <span class="amount minus">86,000</span>
                             </li>
                             <li class="day__spendings">
-                              <p class="name">스타벅스</p>
-                              <p class="amount minus">4,800</p>
+                              <span class="name">스타벅스</span>
+                              <span class="amount minus">4,800</span>
                             </li>
                             <li class="day__spendings">
-                              <p class="name">전길수</p>
-                              <p class="amount plus">+ 86,000</p>
+                              <span class="name">전길수</span>
+                              <span class="amount plus">+ 86,000</span>
                             </li>
                           </ol>
                         </section>
                         <section class="day yesterday">
                           <header class="day__title">
                             <h3>어제</h3>
-                            <p class="day__amount sub-text">
+                            <span class="day__amount sub-text">
                               <em class="day__sum">71,600</em>원 지출
-                            </p>
+                            </span>
                           </header>
                           <ol>
                             <li class="day__spendings">
-                              <p class="name">CU</p>
-                              <p class="amount minus">8,900</p>
+                              <span class="name">CU</span>
+                              <span class="amount minus">8,900</span>
                             </li>
                             <li class="day__spendings">
-                              <p class="name">김경남</p>
-                              <p class="amount plus">+ 31,000</p>
+                              <span class="name">김경남</span>
+                              <span class="amount plus">+ 31,000</span>
                             </li>
                             <li class="day__spendings">
-                              <p class="name">애슐리</p>
-                              <p class="amount minus">31,000</p>
+                              <span class="name">애슐리</span>
+                              <span class="amount minus">31,000</span>
                             </li>
                             <li class="day__spendings">
-                              <p class="name">교보문고</p>
-                              <p class="amount minus">18,000</p>
+                              <span class="name">교보문고</span>
+                              <span class="amount minus">18,000</span>
                             </li>
                             <li class="day__spendings">
-                              <p class="name">미스터 피자</p>
-                              <p class="amount minus">32,000</p>
+                              <span class="name">미스터 피자</span>
+                              <span class="amount minus">32,000</span>
                             </li>
                           </ol>
                         </section>
                         <section class="day 2days-ago">
                           <header class="day__title">
                             <h3>이틀 전</h3>
-                            <p class="day__amount sub-text">
+                            <span class="day__amount sub-text">
                               <em class="day__sum">64,000</em>원 지출
-                            </p>
+                            </span>
                           </header>
                           <ol>
                             <li class="day__spendings">
-                              <p class="name">알파문구</p>
-                              <p class="amount minus">46,000</p>
+                              <span class="name">알파문구</span>
+                              <span class="amount minus">46,000</span>
                             </li>
                             <li class="day__spendings">
-                              <p class="name">스타벅스</p>
-                              <p class="amount minus">18,000</p>
+                              <span class="name">스타벅스</span>
+                              <span class="amount minus">18,000</span>
                             </li>
                             <li class="day__spendings">
-                              <p class="name">미스터 피자</p>
-                              <p class="amount minus">32,000</p>
+                              <span class="name">미스터 피자</span>
+                              <span class="amount minus">32,000</span>
                             </li>
                           </ol>
                         </section>
@@ -1092,7 +1091,7 @@
                       <div class="standard-container">
                         <h3 class="title">기준 금액 설정</h3>
                         <div class="price">
-                          <strong class="standard-amount">2,100,000</strong> 원
+                          <strong class="standard-amount">0</strong> 원
                         </div>
                       </div>
                       <form class="slide">
@@ -1100,7 +1099,7 @@
                           class="slide-bar"
                           type="range"
                           name="spending"
-                          value="1240000"
+                          value="0"
                           min="0"
                           max="1500000"
                         />
@@ -1109,7 +1108,7 @@
                           class="slide-bar"
                           type="range"
                           name="standard"
-                          value="1000000"
+                          value="0"
                           min="0"
                           step="100"
                           max="1500000"
@@ -1150,10 +1149,10 @@
                               alt="주유비 카테고리"
                             />
                           </div>
-                          <p class="category__name">주유비</p>
-                          <p class="category__amount">
+                          <span class="category__name">주유비</span>
+                          <span class="category__amount">
                             <em class="category-sum">56,000</em>원
-                          </p>
+                          </span>
                         </li>
                         <li class="category">
                           <div class="category__img">
@@ -1162,10 +1161,10 @@
                               alt="건강관리비 카테고리"
                             />
                           </div>
-                          <p class="category__name">건강관리비</p>
-                          <p class="category__amount">
+                          <span class="category__name">건강관리비</span>
+                          <span class="category__amount">
                             <em class="category-sum">80,000</em>원
-                          </p>
+                          </span>
                         </li>
                         <li class="category">
                           <div class="category__img">
@@ -1174,10 +1173,10 @@
                               alt="외식비 카테고리"
                             />
                           </div>
-                          <p class="category__name">외식비</p>
-                          <p class="category__amount">
+                          <span class="category__name">외식비</span>
+                          <spanp class="category__amount">
                             <em class="category-sum">233,000</em>원
-                          </p>
+                          </span>
                         </li>
                         <li class="category">
                           <div class="category__img">
@@ -1187,10 +1186,10 @@
                               class="category__img"
                             />
                           </div>
-                          <p class="category__name">장보기</p>
-                          <p class="category__amount">
+                          <span class="category__name">장보기</span>
+                          <span class="category__amount">
                             <em class="category-sum">390,000</em>원
-                          </p>
+                          </span>
                         </li>
                         <li class="category">
                           <div class="category__img">
@@ -1200,10 +1199,10 @@
                               class="category__img"
                             />
                           </div>
-                          <p class="category__name">상점</p>
-                          <p class="category__amount">
+                          <span class="category__name">상점</span>
+                          <span class="category__amount">
                             <em class="category-sum">46,000</em>원
-                          </p>
+                          </span>
                         </li>
                       </ul>
                     </div>
