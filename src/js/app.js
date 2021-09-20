@@ -1,6 +1,10 @@
 // ----------- USER -----------
 const User1 = document.querySelector('.user1');
 
+// ----------- CARD -----------
+const cardRemainDay = User1.querySelector('.remaining-day');
+const cardRemainAmount = User1.querySelector('.remaining-amount');
+
 // ---------- BTN ----------
 // 지출 관리 버튼
 const spendingManage = document.querySelectorAll('.manage-page');
