@@ -144,7 +144,7 @@ main {
   font-size: var(--font-small);
   font-weight: var(--weight-medium);
 }
-.main-page .card .amount .standard-amount {
+.main-page .card .amount .spending-amount {
   margin-right: -3px;
   letter-spacing: 2px;
   text-align: right;

@@ -19,7 +19,7 @@ function spendingSlideBarSet(spendingAmountNum) {
 // 기준 금액 입력
 
 const standardSlideBar = User1.querySelectorAll('.slide-bar[name="standard"]');
-const AmountText = User1.querySelectorAll('.standard-amount');
+const AmountText = User1.querySelector('.standard-amount');
 
 let saveStandardAmount = localStorage.getItem('user1');
 
@@ -41,6 +41,6 @@ function setStandardAmount() {
     saveStandardAmount = parseInt(localStorage.getItem('user1'));
     standard.value = saveStandardAmount;
 
-    AmountText[i].textContent = saveStandardAmount.toLocaleString();
+    AmountText.textContent = saveStandardAmount.toLocaleString();
   });
 }
