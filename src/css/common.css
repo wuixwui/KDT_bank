@@ -85,11 +85,13 @@ h3 {
   font-weight: var(--weight-medium);
   color: var(--color-dark);
 }
-p {
+p,
+span {
   font-size: var(--font-regular);
   font-weight: var(--weight-regular);
   color: var(--color-dark);
 }
+
 .btn-text {
   font-size: var(--font-small);
   font-weight: var(--weight-medium);
@@ -143,7 +145,6 @@ p {
 }
 .slide .slide-bar[name='spending']::-webkit-slider-thumb {
   width: 1px;
-  background: transparent;
 }
 
 /* ----------- [standard] slide bar ----------- */
@@ -157,7 +158,8 @@ p {
   cursor: pointer;
 }
 
-/* SWIPER */
+/* SWIPER slide */
+
 .vertical.swiper .swiper-slide {
   height: fit-content;
   height: -moz-fit-content;

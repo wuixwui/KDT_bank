@@ -28,14 +28,14 @@ body {
 /* clock */
 .phone-bar .current-time {
   margin-left: 15px;
-  font-size: 15px;
-  line-height: 20px;
-  font-weight: var(--weight-light);
 }
 .phone-bar .current-time span {
   display: inline-block;
   width: 17px;
   text-align: right;
+  font-size: 15px;
+  line-height: 20px;
+  font-weight: var(--weight-light);
 }
 
 /* state */
