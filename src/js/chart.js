@@ -13,25 +13,33 @@ BankDataRequest.onload = function () {
   // BankDataRequest.response는 서버의 json 파일 객체에서 banklist의 배열을 가져옴
   const BankList = BankDataRequest.response['bankList'];
 
+  // slide bar와 카드에 데이터 추가
+  slideBarAndCardDataChange(BankList);
+  // 날짜별 지출 리스트 생성
+  createDay(BankList);
+};
+
+// ----------- 데이터 조작 -------------
+//slide bar & card 조절
+function slideBarAndCardDataChange(daySpending) {
+  const today = untilToday(daySpending);
+
   //보유 금액 및 지출 금액, 남은 금액
-  const spendingAmountNum = spendingAmount(BankList);
-  const havingAmountNum = havingAmount(BankList);
+  const spendingAmountNum = spendingAmount(today);
+  const havingAmountNum = havingAmount(today);
   const remainingAmountNum = saveStandardAmount - spendingAmountNum;
 
   // 남은 기간과 금액 표시
   cardRemainAmount.innerText = remainingAmountNum.toLocaleString();
   cardRemainDay.innerText = isLastday() - isToday() + 1;
-
-  // 날짜별 지출 리스트 생성
-  createDay(BankList);
+  // 사용한 금액 표시
+  cardSpendingAmount.innerText = spendingAmountNum.toLocaleString();
 
   // slide bar 표시
   slideBarSet(havingAmountNum);
   spendingSlideBarSet(spendingAmountNum);
   setStandardAmount();
-};
-
-// ----------- 데이터 조작 -------------
+}
 
 //리스트 컨테이너
 const dayListSlide = User1.querySelector('.day-container .swiper-slide');
@@ -75,9 +83,8 @@ function createDayEls(days, thisDays) {
     `;
 
   const spendingList = dayListSlide.querySelectorAll('ol');
-  console.log(spendingList);
+
   const spendingSum = dayListSlide.querySelectorAll('.day__sum');
-  console.log(spendingSum);
 
   //당일 ol 리스트에 지출 및 수입금액의 리스트 추가
   detailByday.forEach((item) => {
