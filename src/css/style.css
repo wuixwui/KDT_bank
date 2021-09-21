@@ -363,6 +363,9 @@ main {
   width: fit-content;
   width: -moz-fit-content;
 }
+.manage-page .manage-container .daily-report .graph-container .graph canvas {
+  width: 1000px;
+}
 
 /* ----------- 한달 지출 패턴 ----------- */
 /* 그래프 */
