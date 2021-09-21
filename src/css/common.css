@@ -162,6 +162,10 @@ span {
   cursor: pointer;
 }
 
+.card .slide .slide-bar[name='standard']::-webkit-slider-thumb {
+  cursor: default;
+}
+
 /* SWIPER slide */
 
 .vertical.swiper .swiper-slide {
