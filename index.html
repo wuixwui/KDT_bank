@@ -37,8 +37,9 @@
       href="https://unpkg.com/swiper@7/swiper-bundle.min.css"
       media="screen"
     />
-
     <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js" defer></script>
     <!-- js -->
     <script src="./src/js/app.js" defer></script>
     <!-- swiper -->
@@ -164,7 +165,6 @@
                         <!-- 두 개의 슬라이드 바를 겹쳐서 사용: 사용한 금액이 밑 - 기준 금액이 위에 배치 -->
                         <!-- 사용한 값 합계 표시 -->
                         <input
-                          disabled
                           readonly
                           class="slide-bar"
                           type="range"
@@ -175,7 +175,6 @@
                         />
                         <!-- 사용자 지정 한계치 -->
                         <input
-                          disabled
                           readonly
                           class="slide-bar"
                           type="range"
@@ -313,10 +312,7 @@
                       <div class="swiper horizontal">
                         <div class="swiper-wrapper graph-container">
                           <div class="swiper-slide graph">
-                            <img
-                              src="./src/images/temp-graph/Bar-chart-vertical.png"
-                              alt="일간 리포트 바 그래프"
-                            />
+                            <canvas id="myChart"></canvas>
                           </div>
                         </div>
                       </div>
