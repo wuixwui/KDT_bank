@@ -18,6 +18,10 @@ button {
 img {
   display: block;
 }
+input:disabled {
+  opacity: 1;
+  -webkit-text-fill-color: inherit;
+}
 
 /* GLOBAL */
 :root {
