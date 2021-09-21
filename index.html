@@ -142,7 +142,12 @@
                   <div class="card">
                     <p class="account sub-text">
                       <strong class="account-number">355-673877-78773</strong>
-                      <button class="btn--transfer btn-text">이체</button>
+                      <button
+                        class="btn--transfer btn-text"
+                        aria-label="이체하기"
+                      >
+                        이체
+                      </button>
                     </p>
                     <div class="amount">
                       <strong class="spending-amount">0</strong> 원
@@ -173,14 +178,16 @@
                           max="0"
                         />
                       </div>
-                      <button class="btn--spending">
+                      <button
+                        class="btn--spending"
+                        aria-label="지출 관리 화면으로 이동"
+                      >
                         <svg
                           width="24"
                           height="24"
                           viewBox="0 0 24 24"
                           role="img"
                         >
-                          <text font-size="0">지출 관리 화면으로 이동</text>
                           <path
                             d="M5 9.2H8V19H5V9.2ZM10.6 5H13.4V19H10.6V5ZM16.2 13H19V19H16.2V13Z"
                             fill="black"
@@ -204,7 +211,7 @@
                 <!-- detail -->
                 <section class="details">
                   <!-- drag and drop btn -->
-                  <button></button>
+                  <button aria-label="상세화면을 전체화면으로 보기"></button>
                   <article class="swiper horizontal">
                     <div class="swiper-wrapper">
                       <div class="swiper-slide piggy-bank">
@@ -227,14 +234,16 @@
                               </div>
                             </li>
                           </ul>
-                          <button class="btn--piggy-bank">
+                          <button
+                            class="btn--piggy-bank"
+                            aria-label="저금통 추가하기"
+                          >
                             <svg
                               width="23"
                               height="23"
                               viewBox="0 0 23 23"
                               role="img"
                             >
-                              <text font-size="0">저금통 추가하기</text>
                               <path
                                 d="M11.25 0.5C12.2812 0.5 13.2773 0.632813 14.2383 0.898438C15.1992 1.16406 16.0938 1.54297 16.9219 2.03516C17.75 2.52734 18.5078 3.11328 19.1953 3.79297C19.8828 4.47266 20.4688 5.23047 20.9531 6.06641C21.4375 6.90234 21.8164 7.80078 22.0898 8.76172C22.3633 9.72266 22.5 10.7188 22.5 11.75C22.5 12.7812 22.3672 13.7773 22.1016 14.7383C21.8359 15.6992 21.457 16.5938 20.9648 17.4219C20.4727 18.25 19.8867 19.0078 19.207 19.6953C18.5273 20.3828 17.7695 20.9688 16.9336 21.4531C16.0977 21.9375 15.1992 22.3164 14.2383 22.5898C13.2773 22.8633 12.2812 23 11.25 23C10.2188 23 9.22266 22.8672 8.26172 22.6016C7.30078 22.3359 6.40625 21.957 5.57812 21.4648C4.75 20.9727 3.99219 20.3867 3.30469 19.707C2.61719 19.0273 2.03125 18.2695 1.54688 17.4336C1.0625 16.5977 0.683594 15.7031 0.410156 14.75C0.136719 13.7969 0 12.7969 0 11.75C0 10.7188 0.132813 9.72266 0.398438 8.76172C0.664062 7.80078 1.04297 6.90625 1.53516 6.07812C2.02734 5.25 2.61328 4.49219 3.29297 3.80469C3.97266 3.11719 4.73047 2.53125 5.56641 2.04688C6.40234 1.5625 7.29687 1.18359 8.25 0.910156C9.20313 0.636719 10.2031 0.5 11.25 0.5ZM18 11H12V5H10.5V11H4.5V12.5H10.5V18.5H12V12.5H18V11Z"
                                 fill="#FF5F00"
@@ -384,7 +393,7 @@
                   </div>
                 </div>
               </div>
-              <button>닫기</button>
+              <button aria-label="지출 관리 화면 닫기">닫기</button>
             </section>
           </div>
           <!-- user2 -->
@@ -430,10 +439,15 @@
                   <div class="card">
                     <p class="account sub-text">
                       <strong class="account-number">355-673877-78773</strong>
-                      <button class="btn--transfer btn-text">이체</button>
+                      <button
+                        class="btn--transfer btn-text"
+                        aria-label="이체하기"
+                      >
+                        이체
+                      </button>
                     </p>
                     <div class="amount">
-                      <strong class="standard-amount">0</strong> 원
+                      <strong class="spending-amount">0</strong> 원
                     </div>
                     <div class="slides">
                       <div class="slide">
@@ -447,7 +461,7 @@
                           name="spending"
                           value="0"
                           min="0"
-                          max="1500000"
+                          max="0"
                         />
                         <!-- 사용자 지정 한계치 -->
                         <input
@@ -458,17 +472,19 @@
                           name="standard"
                           value="0"
                           min="0"
-                          max="1500000"
+                          max="0"
                         />
                       </div>
-                      <button class="btn--spending">
+                      <button
+                        class="btn--spending"
+                        aria-label="지출 관리 화면으로 이동"
+                      >
                         <svg
                           width="24"
                           height="24"
                           viewBox="0 0 24 24"
                           role="img"
                         >
-                          <text font-size="0">지출 관리 화면으로 이동</text>
                           <path
                             d="M5 9.2H8V19H5V9.2ZM10.6 5H13.4V19H10.6V5ZM16.2 13H19V19H16.2V13Z"
                             fill="black"
@@ -486,7 +502,7 @@
                 <!-- detail -->
                 <section class="details">
                   <!-- drag and drop btn -->
-                  <button></button>
+                  <button aria-label="상세화면을 전체화면으로 보기"></button>
                   <article class="swiper horizontal">
                     <div class="swiper-wrapper">
                       <div class="swiper-slide piggy-bank">
@@ -509,14 +525,16 @@
                               </div>
                             </li>
                           </ul>
-                          <button class="btn--piggy-bank">
+                          <button
+                            class="btn--piggy-bank"
+                            aria-label="저금통 추가하기"
+                          >
                             <svg
                               width="23"
                               height="23"
                               viewBox="0 0 23 23"
                               role="img"
                             >
-                              <text font-size="0">저금통 추가하기</text>
                               <path
                                 d="M11.25 0.5C12.2812 0.5 13.2773 0.632813 14.2383 0.898438C15.1992 1.16406 16.0938 1.54297 16.9219 2.03516C17.75 2.52734 18.5078 3.11328 19.1953 3.79297C19.8828 4.47266 20.4688 5.23047 20.9531 6.06641C21.4375 6.90234 21.8164 7.80078 22.0898 8.76172C22.3633 9.72266 22.5 10.7188 22.5 11.75C22.5 12.7812 22.3672 13.7773 22.1016 14.7383C21.8359 15.6992 21.457 16.5938 20.9648 17.4219C20.4727 18.25 19.8867 19.0078 19.207 19.6953C18.5273 20.3828 17.7695 20.9688 16.9336 21.4531C16.0977 21.9375 15.1992 22.3164 14.2383 22.5898C13.2773 22.8633 12.2812 23 11.25 23C10.2188 23 9.22266 22.8672 8.26172 22.6016C7.30078 22.3359 6.40625 21.957 5.57812 21.4648C4.75 20.9727 3.99219 20.3867 3.30469 19.707C2.61719 19.0273 2.03125 18.2695 1.54688 17.4336C1.0625 16.5977 0.683594 15.7031 0.410156 14.75C0.136719 13.7969 0 12.7969 0 11.75C0 10.7188 0.132813 9.72266 0.398438 8.76172C0.664062 7.80078 1.04297 6.90625 1.53516 6.07812C2.02734 5.25 2.61328 4.49219 3.29297 3.80469C3.97266 3.11719 4.73047 2.53125 5.56641 2.04688C6.40234 1.5625 7.29687 1.18359 8.25 0.910156C9.20313 0.636719 10.2031 0.5 11.25 0.5ZM18 11H12V5H10.5V11H4.5V12.5H10.5V18.5H12V12.5H18V11Z"
                                 fill="#FF5F00"
@@ -530,90 +548,7 @@
                   </article>
                   <article class="swiper vertical day-container">
                     <div class="swiper-wrapper">
-                      <div class="swiper-slide">
-                        <section class="day">
-                          <header class="day__title">
-                            <h3>오늘</h3>
-                            <span class="day__amount sub-text">
-                              <em class="day__sum">127,600</em>원 지출
-                            </span>
-                          </header>
-                          <ol>
-                            <li class="day__spendings">
-                              <span class="name">미스터 피자</span>
-                              <span class="amount minus">32,000</span>
-                            </li>
-                            <li class="day__spendings">
-                              <span class="name">택시</span>
-                              <span class="amount minus">4,800</span>
-                            </li>
-                            <li class="day__spendings">
-                              <span class="name">이마트</span>
-                              <span class="amount minus">86,000</span>
-                            </li>
-                            <li class="day__spendings">
-                              <span class="name">스타벅스</span>
-                              <span class="amount minus">4,800</span>
-                            </li>
-                            <li class="day__spendings">
-                              <span class="name">전길수</span>
-                              <span class="amount plus">+ 86,000</span>
-                            </li>
-                          </ol>
-                        </section>
-                        <section class="day yesterday">
-                          <header class="day__title">
-                            <h3>어제</h3>
-                            <span class="day__amount sub-text">
-                              <em class="day__sum">71,600</em>원 지출
-                            </span>
-                          </header>
-                          <ol>
-                            <li class="day__spendings">
-                              <span class="name">CU</span>
-                              <span class="amount minus">8,900</span>
-                            </li>
-                            <li class="day__spendings">
-                              <span class="name">김경남</span>
-                              <span class="amount plus">+ 31,000</span>
-                            </li>
-                            <li class="day__spendings">
-                              <span class="name">애슐리</span>
-                              <span class="amount minus">31,000</span>
-                            </li>
-                            <li class="day__spendings">
-                              <span class="name">교보문고</span>
-                              <span class="amount minus">18,000</span>
-                            </li>
-                            <li class="day__spendings">
-                              <span class="name">미스터 피자</span>
-                              <span class="amount minus">32,000</span>
-                            </li>
-                          </ol>
-                        </section>
-                        <section class="day 2days-ago">
-                          <header class="day__title">
-                            <h3>이틀 전</h3>
-                            <span class="day__amount sub-text">
-                              <em class="day__sum">64,000</em>원 지출
-                            </span>
-                          </header>
-                          <ol>
-                            <li class="day__spendings">
-                              <span class="name">알파문구</span>
-                              <span class="amount minus">46,000</span>
-                            </li>
-                            <li class="day__spendings">
-                              <span class="name">스타벅스</span>
-                              <span class="amount minus">18,000</span>
-                            </li>
-                            <li class="day__spendings">
-                              <span class="name">미스터 피자</span>
-                              <span class="amount minus">32,000</span>
-                            </li>
-                          </ol>
-                        </section>
-                      </div>
+                      <div class="swiper-slide"></div>
                     </div>
                   </article>
                 </section>
@@ -641,7 +576,7 @@
                           name="spending"
                           value="0"
                           min="0"
-                          max="1500000"
+                          max="0"
                         />
                         <!-- 사용자 지정 한계치 -->
                         <input
@@ -650,8 +585,8 @@
                           name="standard"
                           value="0"
                           min="0"
-                          step="100"
-                          max="1500000"
+                          step="10"
+                          max="0"
                           onChange="rangeSlide(this.value)"
                           onmousemove="rangeSlide(this.value)"
                         />
@@ -749,7 +684,7 @@
                   </div>
                 </div>
               </div>
-              <button>닫기</button>
+              <button aria-label="지출 관리 화면 닫기">닫기</button>
             </section>
           </div>
           <!-- user3 -->
@@ -795,10 +730,15 @@
                   <div class="card">
                     <p class="account sub-text">
                       <strong class="account-number">355-673877-78773</strong>
-                      <button class="btn--transfer btn-text">이체</button>
+                      <button
+                        class="btn--transfer btn-text"
+                        aria-label="이체하기"
+                      >
+                        이체
+                      </button>
                     </p>
                     <div class="amount">
-                      <strong class="standard-amount">0</strong> 원
+                      <strong class="spending-amount">0</strong> 원
                     </div>
                     <div class="slides">
                       <div class="slide">
@@ -812,7 +752,7 @@
                           name="spending"
                           value="0"
                           min="0"
-                          max="1500000"
+                          max="0"
                         />
                         <!-- 사용자 지정 한계치 -->
                         <input
@@ -823,17 +763,19 @@
                           name="standard"
                           value="0"
                           min="0"
-                          max="1500000"
+                          max="0"
                         />
                       </div>
-                      <button class="btn--spending">
+                      <button
+                        class="btn--spending"
+                        aria-label="지출 관리 화면으로 이동"
+                      >
                         <svg
                           width="24"
                           height="24"
                           viewBox="0 0 24 24"
                           role="img"
                         >
-                          <text font-size="0">지출 관리 화면으로 이동</text>
                           <path
                             d="M5 9.2H8V19H5V9.2ZM10.6 5H13.4V19H10.6V5ZM16.2 13H19V19H16.2V13Z"
                             fill="black"
@@ -857,7 +799,7 @@
                 <!-- detail -->
                 <section class="details">
                   <!-- drag and drop btn -->
-                  <button></button>
+                  <button aria-label="상세화면을 전체화면으로 보기"></button>
                   <article class="swiper horizontal">
                     <div class="swiper-wrapper">
                       <div class="swiper-slide piggy-bank">
@@ -880,14 +822,16 @@
                               </div>
                             </li>
                           </ul>
-                          <button class="btn--piggy-bank">
+                          <button
+                            class="btn--piggy-bank"
+                            aria-label="저금통 추가하기"
+                          >
                             <svg
                               width="23"
                               height="23"
                               viewBox="0 0 23 23"
                               role="img"
                             >
-                              <text font-size="0">저금통 추가하기</text>
                               <path
                                 d="M11.25 0.5C12.2812 0.5 13.2773 0.632813 14.2383 0.898438C15.1992 1.16406 16.0938 1.54297 16.9219 2.03516C17.75 2.52734 18.5078 3.11328 19.1953 3.79297C19.8828 4.47266 20.4688 5.23047 20.9531 6.06641C21.4375 6.90234 21.8164 7.80078 22.0898 8.76172C22.3633 9.72266 22.5 10.7188 22.5 11.75C22.5 12.7812 22.3672 13.7773 22.1016 14.7383C21.8359 15.6992 21.457 16.5938 20.9648 17.4219C20.4727 18.25 19.8867 19.0078 19.207 19.6953C18.5273 20.3828 17.7695 20.9688 16.9336 21.4531C16.0977 21.9375 15.1992 22.3164 14.2383 22.5898C13.2773 22.8633 12.2812 23 11.25 23C10.2188 23 9.22266 22.8672 8.26172 22.6016C7.30078 22.3359 6.40625 21.957 5.57812 21.4648C4.75 20.9727 3.99219 20.3867 3.30469 19.707C2.61719 19.0273 2.03125 18.2695 1.54688 17.4336C1.0625 16.5977 0.683594 15.7031 0.410156 14.75C0.136719 13.7969 0 12.7969 0 11.75C0 10.7188 0.132813 9.72266 0.398438 8.76172C0.664062 7.80078 1.04297 6.90625 1.53516 6.07812C2.02734 5.25 2.61328 4.49219 3.29297 3.80469C3.97266 3.11719 4.73047 2.53125 5.56641 2.04688C6.40234 1.5625 7.29687 1.18359 8.25 0.910156C9.20313 0.636719 10.2031 0.5 11.25 0.5ZM18 11H12V5H10.5V11H4.5V12.5H10.5V18.5H12V12.5H18V11Z"
                                 fill="#FF5F00"
@@ -901,90 +845,7 @@
                   </article>
                   <article class="swiper vertical day-container">
                     <div class="swiper-wrapper">
-                      <div class="swiper-slide">
-                        <section class="day">
-                          <header class="day__title">
-                            <h3>오늘</h3>
-                            <span class="day__amount sub-text">
-                              <em class="day__sum">127,600</em>원 지출
-                            </span>
-                          </header>
-                          <ol>
-                            <li class="day__spendings">
-                              <span class="name">미스터 피자</span>
-                              <span class="amount minus">32,000</span>
-                            </li>
-                            <li class="day__spendings">
-                              <span class="name">택시</span>
-                              <span class="amount minus">4,800</span>
-                            </li>
-                            <li class="day__spendings">
-                              <span class="name">이마트</span>
-                              <span class="amount minus">86,000</span>
-                            </li>
-                            <li class="day__spendings">
-                              <span class="name">스타벅스</span>
-                              <span class="amount minus">4,800</span>
-                            </li>
-                            <li class="day__spendings">
-                              <span class="name">전길수</span>
-                              <span class="amount plus">+ 86,000</span>
-                            </li>
-                          </ol>
-                        </section>
-                        <section class="day yesterday">
-                          <header class="day__title">
-                            <h3>어제</h3>
-                            <span class="day__amount sub-text">
-                              <em class="day__sum">71,600</em>원 지출
-                            </span>
-                          </header>
-                          <ol>
-                            <li class="day__spendings">
-                              <span class="name">CU</span>
-                              <span class="amount minus">8,900</span>
-                            </li>
-                            <li class="day__spendings">
-                              <span class="name">김경남</span>
-                              <span class="amount plus">+ 31,000</span>
-                            </li>
-                            <li class="day__spendings">
-                              <span class="name">애슐리</span>
-                              <span class="amount minus">31,000</span>
-                            </li>
-                            <li class="day__spendings">
-                              <span class="name">교보문고</span>
-                              <span class="amount minus">18,000</span>
-                            </li>
-                            <li class="day__spendings">
-                              <span class="name">미스터 피자</span>
-                              <span class="amount minus">32,000</span>
-                            </li>
-                          </ol>
-                        </section>
-                        <section class="day 2days-ago">
-                          <header class="day__title">
-                            <h3>이틀 전</h3>
-                            <span class="day__amount sub-text">
-                              <em class="day__sum">64,000</em>원 지출
-                            </span>
-                          </header>
-                          <ol>
-                            <li class="day__spendings">
-                              <span class="name">알파문구</span>
-                              <span class="amount minus">46,000</span>
-                            </li>
-                            <li class="day__spendings">
-                              <span class="name">스타벅스</span>
-                              <span class="amount minus">18,000</span>
-                            </li>
-                            <li class="day__spendings">
-                              <span class="name">미스터 피자</span>
-                              <span class="amount minus">32,000</span>
-                            </li>
-                          </ol>
-                        </section>
-                      </div>
+                      <div class="swiper-slide"></div>
                     </div>
                   </article>
                 </section>
@@ -1012,7 +873,7 @@
                           name="spending"
                           value="0"
                           min="0"
-                          max="1500000"
+                          max="0"
                         />
                         <!-- 사용자 지정 한계치 -->
                         <input
@@ -1021,8 +882,8 @@
                           name="standard"
                           value="0"
                           min="0"
-                          step="100"
-                          max="1500000"
+                          step="10"
+                          max="0"
                           onChange="rangeSlide(this.value)"
                           onmousemove="rangeSlide(this.value)"
                         />
@@ -1120,7 +981,7 @@
                   </div>
                 </div>
               </div>
-              <button>닫기</button>
+              <button aria-label="지출 관리 화면 닫기">닫기</button>
             </section>
           </div>
         </main>
