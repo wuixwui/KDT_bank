@@ -1,7 +1,7 @@
 /* ----- user1 ----- */
 /* user image */
 .user1 .main-page > header .header-left {
-  background-image: url('../images/avatar/020092.jpg');
+  background-image: url('../images/avatar/020092.webp');
 }
 /* slide bar color */
 .user1 .slide .slide-bar[name='spending']::-webkit-slider-thumb {
@@ -21,7 +21,7 @@
 /* ----- user2 ----- */
 /* user image */
 .user2 .main-page > header .header-left {
-  background-image: url('../images/avatar/020122.jpg');
+  background-image: url('../images/avatar/020122.webp');
 }
 /* slide bar color */
 .user2 .slide .slide-bar[name='spending']::-webkit-slider-thumb {
@@ -41,7 +41,7 @@
 /* ----- user3 ----- */
 /* user image */
 .user3 .main-page > header .header-left {
-  background-image: url('../images/avatar/020396.jpg');
+  background-image: url('../images/avatar/020396.webp');
 }
 /* slide bar color */
 .user3 .slide .slide-bar[name='spending']::-webkit-slider-thumb {
