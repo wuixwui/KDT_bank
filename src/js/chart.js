@@ -15,11 +15,16 @@ BankDataRequest.onload = function () {
 
   // slide bar와 카드에 데이터 추가
   slideBarAndCardDataChange(BankList);
+
   // 날짜별 지출 리스트 생성
   createDay(BankList);
 };
 
 // ----------- 데이터 조작 -------------
+
+//리스트 컨테이너
+const dayListSlide = User1.querySelector('.day-container .swiper-slide');
+
 //slide bar & card 조절
 function slideBarAndCardDataChange(daySpending) {
   const today = untilToday(daySpending);
@@ -41,9 +46,6 @@ function slideBarAndCardDataChange(daySpending) {
   setStandardAmount();
 }
 
-//리스트 컨테이너
-const dayListSlide = User1.querySelector('.day-container .swiper-slide');
-
 // 날짜마다 HTML 요소 추가
 function createDay(daySpending) {
   const thisDays = untilToday(daySpending);
@@ -53,11 +55,17 @@ function createDay(daySpending) {
     createDayEls(i, thisDays);
   }
 
+  //chart 생성
+  createBarChart(dataList);
+  monthSpendingPattern(thisDays);
   // 데이터 동적 생성 후 swiper를 생성해서 wrapper가 slide크기로 감쌀 수 있도록 함
   createSwiper();
 }
 
 // ---------- 요소 추가 ----------
+// 일일 지출날짜와 지출 금액 리스트
+const dataList = [];
+
 // dayListSlide 안에 HTML 요소 생성 함수
 function createDayEls(days, thisDays) {
   let date = isStringToday(days);
@@ -83,7 +91,6 @@ function createDayEls(days, thisDays) {
     `;
 
   const spendingList = dayListSlide.querySelectorAll('ol');
-
   const spendingSum = dayListSlide.querySelectorAll('.day__sum');
 
   //당일 ol 리스트에 지출 및 수입금액의 리스트 추가
@@ -91,9 +98,16 @@ function createDayEls(days, thisDays) {
     spendingList[spendingList.length - 1].innerHTML += createDayListItem(item);
   });
 
+  const spendingAmountToday = spendingAmount(detailByday);
   // 당일 총 지출 금액 계산
   spendingSum[spendingSum.length - 1].innerText =
-    spendingAmount(detailByday).toLocaleString();
+    spendingAmountToday.toLocaleString();
+
+  // 하루 지출 차트 데이터 생성
+  dataList.push({
+    date: String(days).slice(6, 8),
+    spending: spendingAmountToday,
+  });
 }
 
 // li 생성
@@ -111,98 +125,188 @@ function createDayListItem(spending) {
   `;
 }
 
-// ----------- 날짜 ------------
+// 바 차트 생성 함수
+function createBarChart(dataList) {
+  const labels = [];
+  const datas = [];
 
-// (00000000)를 (0000-00-00)형태의 문자열로 변환
-function isStringToday(date) {
-  // 오늘 날짜 bankList의 형태에 맞춰서 반환
-  return `${String(date).slice(0, 4)}-${String(date).slice(4, 6)}-${String(
-    date
-  ).slice(6, 8)}`;
+  const reversedDataList = dataList.reverse();
+  reversedDataList.forEach((item) => {
+    labels.push(item.date);
+    datas.push(item.spending);
+  });
+
+  // Bar chart Data
+  const data = {
+    labels: labels,
+    datasets: [
+      {
+        label: '일간 지출 내역',
+        type: 'bar',
+        backgroundColor: mint,
+        borderColor: mint,
+        borderWidth: 15,
+        borderRadius: 8,
+        borderSkipped: 'start',
+        data: datas,
+      },
+    ],
+  };
+
+  const config = {
+    type: 'line',
+    data: data,
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: {
+        legend: {
+          display: false,
+        },
+        title: {
+          display: false,
+        },
+        tooltip: {
+          bodySpacing: 3,
+          padding: 15,
+          displayColors: false,
+        },
+      },
+    },
+  };
+
+  let myChart = new Chart(document.getElementById('myBarChart'), config);
+  return myChart;
 }
 
-// 당일 날짜 생성
-function isToday() {
-  const date = new Date();
-  // 오늘 날짜 bankList의 형태에 맞춰서 반환
-  return Number(
-    `${date.getFullYear()}${String(date.getMonth() + 1).padStart(2, 0)}${String(
-      date.getDate()
-    ).padStart(2, 0)}`
-  );
-}
-// 달의 마지막 날짜
-function isLastday() {
-  const lastday31 = [1, 3, 5, 7, 8, 10, 12];
-  const lastday30 = [4, 6, 9, 11];
-  const lastday28 = [2];
+// 월 지출 패턴 생성 함수
+function monthSpendingPattern(thisDays) {
+  // 해당 월 표시
+  const month = User1.querySelector('.month-pattern .month');
+  month.textContent = thisDays[0].date.slice(5, 7);
 
-  const today = isToday();
+  // 카테고리별 지출 금액 객체 리스트
+  const classifyDataList = [
+    {
+      classify: 'eatout',
+      price: 0,
+      color: eatout,
+      name: '외식비',
+      image: './src/images/spending_icon/food.svg',
+    },
+    {
+      classify: 'health',
+      price: 0,
+      color: health,
+      name: '건강관리비',
+      image: './src/images/spending_icon/health.svg',
+    },
+    {
+      classify: 'shopping',
+      price: 0,
+      color: shopping,
+      name: '상점',
+      image: './src/images/spending_icon/shop.svg',
+    },
+    {
+      classify: 'mart',
+      price: 0,
+      color: mart,
+      name: '장보기',
+      image: './src/images/spending_icon/basket.svg',
+    },
+    {
+      classify: 'oiling',
+      price: 0,
+      color: oiling,
+      name: '주유비',
+      image: './src/images/spending_icon/oiling.svg',
+    },
+  ];
 
-  const lastday = lastday31.includes(parseInt(String(today).slice(4, 6)))
-    ? parseInt(String(today).slice(0, 6) + '31')
-    : lastday30.includes(parseInt(String(today).slice(4, 6)))
-    ? parseInt(String(today).slice(0, 6) + '30')
-    : lastday28.includes(parseInt(String(today).slice(4, 6)))
-    ? parseInt(String(today).slice(0, 6) + '28')
-    : 'no';
-
-  return lastday;
-}
-
-// 달의 처음 날짜
-function isFirstday() {
-  const today = isToday();
-
-  const firstday = parseInt(String(today).slice(0, 6) + '01');
-  return firstday;
-}
-
-// 오늘 이전까지의 날짜를 최신순으로 정렬한 배열 반환
-function untilToday(daySpending) {
-  const today = isToday();
-
-  const untilToday = daySpending.filter((spending) => {
-    // 현재 달 이전 자료까지만 표시
-    if (
-      parseInt(String(today).slice(4, 6)) ===
-      parseInt(spending.date.slice(5, 7))
-    ) {
-      // 현재 달의 오늘 날짜 이전 자료까지만 표시
-      if (
-        parseInt(String(today).slice(6, 8)) >=
-        parseInt(spending.date.slice(8, 10))
-      ) {
-        return spending;
-      }
+  // 카테고리별로 지출 금액 합산
+  thisDays.forEach((item) => {
+    if (item.income === 'out') {
+      classifyDataList.forEach((category) => {
+        if (item.classify === category.classify) {
+          category.price += item.price;
+        }
+      });
     }
   });
 
-  // 오늘 이전 날짜를 최신순으로 담은 배열 반환
-  return untilToday.reverse();
+  //많이 사용한 순서대로 정렬
+  const sortedClassifyDataList = classifyDataList.sort(
+    (a, b) => b.price - a.price
+  );
+  createMonthList(sortedClassifyDataList);
+
+  // 월별 카테고리 데이터 나누기
+  const labels = [];
+  const colors = [];
+  const datas = [];
+
+  sortedClassifyDataList.forEach((item) => {
+    if (item.price) {
+      labels.push(item.classify);
+      datas.push(item.price);
+      colors.push(item.color);
+    }
+  });
+
+  // Doughnut chart Data
+  const data = {
+    labels: labels,
+    datasets: [
+      {
+        backgroundColor: colors,
+        data: datas,
+      },
+    ],
+  };
+
+  const config = {
+    type: 'doughnut',
+    data: data,
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: {
+        legend: {
+          display: false,
+        },
+        title: {
+          display: false,
+        },
+        tooltip: {
+          bodySpacing: 3,
+          padding: 15,
+        },
+      },
+    },
+  };
+
+  let myChart = new Chart(document.getElementById('myDoughnutChart'), config);
+  return myChart;
 }
 
-// ----------- 금액 -------------
-// 총 사용 금액
-function spendingAmount(daySpending) {
-  const spendingAmount = untilToday(daySpending).reduce((acc, cur) => {
-    const income = cur.income;
-    const price = parseInt(cur.price);
+// 월 카테고리 별 지출 리스트 생성
+function createMonthList(classifyDataList) {
+  const monthContainer = User1.querySelector('.month-pattern ul');
 
-    return income === 'out' ? (acc += price) : (acc += 0);
-  }, 0);
-
-  return spendingAmount;
-}
-
-// 총 보유 금액
-function havingAmount(daySpending) {
-  const havingAmount = untilToday(daySpending).reduce((acc, cur) => {
-    const income = cur.income;
-    const price = parseInt(cur.price);
-
-    return income === 'in' ? (acc += price) : (acc += 0);
-  }, 0);
-
-  return havingAmount;
+  classifyDataList.forEach((item) => {
+    monthContainer.innerHTML += `
+      <li class="category">
+        <div class="category__img">
+          <img
+            src=${item.image}
+            alt=${item.name}
+          />
+        </div>
+        <span class="category__name">${item.name}</span>
+        <span class="category__amount">
+          <em class="category-sum">${item.price.toLocaleString()}</em>원
+        </span>
+      </li>`;
+  });
 }
