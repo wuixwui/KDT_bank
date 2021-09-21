@@ -166,6 +166,7 @@
                         <!-- 사용한 값 합계 표시 -->
                         <input
                           readonly
+                          disabled
                           class="slide-bar"
                           type="range"
                           name="spending"
@@ -176,6 +177,7 @@
                         <!-- 사용자 지정 한계치 -->
                         <input
                           readonly
+                          disabled
                           class="slide-bar"
                           type="range"
                           name="standard"
@@ -312,7 +314,7 @@
                       <div class="swiper horizontal">
                         <div class="swiper-wrapper graph-container">
                           <div class="swiper-slide graph">
-                            <canvas id="myChart"></canvas>
+                            <canvas id="myBarChart" height="150px"></canvas>
                           </div>
                         </div>
                       </div>
@@ -322,76 +324,9 @@
                         <span class="month">6</span>월 지출 패턴
                       </h3>
                       <div class="graph">
-                        <img
-                          width="308px"
-                          src="./src/images/temp-graph/june-graph.png"
-                          alt="6월 지출 패턴 그래프"
-                        />
+                        <canvas id="myDoughnutChart" height="300px"></canvas>
                       </div>
-                      <ul>
-                        <li class="category">
-                          <div class="category__img">
-                            <img
-                              src="./src/images/spending_icon/oiling.svg"
-                              alt="주유비 카테고리"
-                            />
-                          </div>
-                          <span class="category__name">주유비</span>
-                          <span class="category__amount">
-                            <em class="category-sum">56,000</em>원
-                          </span>
-                        </li>
-                        <li class="category">
-                          <div class="category__img">
-                            <img
-                              src="./src/images/spending_icon/health.svg"
-                              alt="건강관리비 카테고리"
-                            />
-                          </div>
-                          <span class="category__name">건강관리비</span>
-                          <span class="category__amount">
-                            <em class="category-sum">80,000</em>원
-                          </span>
-                        </li>
-                        <li class="category">
-                          <div class="category__img">
-                            <img
-                              src="./src/images/spending_icon/food.svg"
-                              alt="외식비 카테고리"
-                            />
-                          </div>
-                          <span class="category__name">외식비</span>
-                          <span class="category__amount">
-                            <em class="category-sum">233,000</em>원
-                          </span>
-                        </li>
-                        <li class="category">
-                          <div class="category__img">
-                            <img
-                              src="./src/images/spending_icon/basket.svg"
-                              alt="장보기 카테고리"
-                              class="category__img"
-                            />
-                          </div>
-                          <span class="category__name">장보기</span>
-                          <span class="category__amount">
-                            <em class="category-sum">390,000</em>원
-                          </span>
-                        </li>
-                        <li class="category">
-                          <div class="category__img">
-                            <img
-                              src="./src/images/spending_icon/shop.svg"
-                              alt="상점 카테고리"
-                              class="category__img"
-                            />
-                          </div>
-                          <span class="category__name">상점</span>
-                          <span class="category__amount">
-                            <em class="category-sum">46,000</em>원
-                          </span>
-                        </li>
-                      </ul>
+                      <ul></ul>
                     </div>
                   </div>
                 </div>
